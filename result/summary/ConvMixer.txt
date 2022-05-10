@@ -1,1 +1,8 @@
 modelName: ConvMixer  learning rate:0.0001  etaMin:1e-07  imgSize:224  savedName:1.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ConvMixer  learning rate:0.0001  etaMin:1e-07  imgSize:224  batchSize:64  savedName:1.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ConvMixer  learning rate:0.0001  etaMin:1e-07  imgSize:224  batchSize:64  savedName:1.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ConvMixer  learning rate:0.0001  etaMin:1e-07  imgSize:224  batchSize:32  savedName:1.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ConvMixer  learning rate:0.0001  etaMin:1e-07  imgSize:224  batchSize:16  savedName:1.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ConvMixer  learning rate:0.0001  etaMin:1e-07  imgSize:224  batchSize:32  savedName:1.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ConvMixer  learning rate:0.0001  etaMin:1e-07  imgSize:224  batchSize:32  savedName:1.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ConvMixer  learning rate:0.0001  etaMin:1e-07  imgSize:224  batchSize:32  savedName:1.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15

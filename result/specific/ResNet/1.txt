@@ -1,5 +1,2604 @@
-['main.py', 'ResNet', '1']
+[38;5;2m[i 0510 00:14:40.145638 60 compiler.py:951] Jittor(1.3.3.14) src: /home/prs01/miniconda3/envs/jittor/lib/python3.7/site-packages/jittor[m
+[38;5;2m[i 0510 00:14:40.162800 60 compiler.py:952] g++ at /usr/bin/g++(9.4.0)[m
+[38;5;2m[i 0510 00:14:40.162980 60 compiler.py:953] cache_path: /home/prs01/.cache/jittor/jt1.3.3/g++9.4.0/py3.7.13/Linux-5.4.0-10xc4/IntelRXeonRGolx7a/default[m
+[38;5;2m[i 0510 00:14:40.215696 60 install_cuda.py:53] cuda_driver_version: [11, 6][m
+[38;5;2m[i 0510 00:14:40.237931 60 __init__.py:411] Found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/bin/nvcc(11.2.152) at /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/bin/nvcc.[m
+[38;5;2m[i 0510 00:14:40.256288 60 __init__.py:411] Found addr2line(2.34) at /usr/bin/addr2line.[m
+[38;5;2m[i 0510 00:14:40.567018 60 compiler.py:1006] cuda key:cu11.2.152_sm_86[m
+[38;5;2m[i 0510 00:14:40.869972 60 __init__.py:227] Total mem: 251.56GB, using 16 procs for compiling.[m
+[38;5;2m[i 0510 00:14:40.997969 60 jit_compiler.cc:28] Load cc_path: /usr/bin/g++[m
+[38;5;2m[i 0510 00:14:41.138274 60 init.cc:62] Found cuda archs: [86,][m
+[38;5;2m[i 0510 00:14:41.306966 60 compile_extern.py:516] mpicc not found, distribution disabled.[m
+[38;5;2m[i 0510 00:14:41.375623 60 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/include/cublas.h[m
+[38;5;2m[i 0510 00:14:41.411964 60 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcublas.so[m
+[38;5;2m[i 0510 00:14:41.412289 60 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcublasLt.so.11[m
+[38;5;2m[i 0510 00:14:42.113642 60 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/include/cudnn.h[m
+[38;5;2m[i 0510 00:14:42.158692 60 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn.so.8[m
+[38;5;2m[i 0510 00:14:42.158840 60 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn_ops_infer.so.8[m
+[38;5;2m[i 0510 00:14:42.175682 60 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn_ops_train.so.8[m
+[38;5;2m[i 0510 00:14:42.182698 60 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn_cnn_infer.so.8[m
+[38;5;2m[i 0510 00:14:42.222796 60 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn_cnn_train.so.8[m
+[38;5;2m[i 0510 00:14:42.871688 60 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/include/curand.h[m
+[38;5;2m[i 0510 00:14:42.926956 60 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcurand.so[m
+[38;5;2m[i 0510 00:14:42.950713 60 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/include/cufft.h[m
+[38;5;2m[i 0510 00:14:43.003143 60 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcufft.so[m
+[38;5;2m[i 0510 00:14:43.148299 60 cuda_flags.cc:32] CUDA enabled.[m
 Loading data...
+[38;5;2m[i 0510 00:14:44.862851 60 dataset.py:631] Found 5001 classes and 60012 images.[m
+[38;5;2m[i 0510 00:14:46.254774 60 dataset.py:631] Found 5001 classes and 10002 images.[m
+[38;5;2m[i 0510 00:14:47.945704 60 dataset.py:631] Found 5001 classes and 10002 images.[m
 ----------------- A new trial ---------------------
-modelName ResNet learning rate: 0.0001 etaMin 1e-07 imgSize 224 savedName 1.pkl criterion CrossEntropyLoss weight_decay 0.001 TMax 15
-0 8.675125
+modelName ResNet learning rate: 0.0001 etaMin 1e-07 imgSize 224 batchSize 64 savedName 1.pkl criterion CrossEntropyLoss weight_decay 0.001 TMax 15
+Training:   0%|          | 0/1600 [00:00<?, ?it/s]
+0it [00:00, ?it/s][A[38;5;3m[w 0510 00:14:48.526333 60 grad.cc:77] grads[0] 'conv1.weight' doesn't have gradient. It will be set to zero: Var(32:1:2:2:i1:o1:s0:n1,float32,conv1.weight,0)[64,3,7,7,][m
+[38;5;3m[w 0510 00:14:48.526387 60 grad.cc:77] grads[1] 'bn1.weight' doesn't have gradient. It will be set to zero: Var(40:1:3:3:i1:o2:s0:n1,float32,bn1.weight,0)[64,][m
+[38;5;3m[w 0510 00:14:48.526405 60 grad.cc:77] grads[2] 'bn1.bias' doesn't have gradient. It will be set to zero: Var(45:1:2:2:i1:o1:s0:n1,float32,bn1.bias,0)[64,][m
+[38;5;3m[w 0510 00:14:48.526413 60 grad.cc:77] grads[3] 'layer1.0.conv1.weight' doesn't have gradient. It will be set to zero: Var(140:1:3:3:i1:o2:s0:n1,float32,layer1.0.conv1.weight,0)[64,64,1,1,][m
+[38;5;3m[w 0510 00:14:48.526424 60 grad.cc:77] grads[4] 'layer1.0.bn1.weight' doesn't have gradient. It will be set to zero: Var(148:1:3:3:i1:o2:s0:n1,float32,layer1.0.bn1.weight,0)[64,][m
+[38;5;3m[w 0510 00:14:48.526434 60 grad.cc:77] grads[5] 'layer1.0.bn1.bias' doesn't have gradient. It will be set to zero: Var(153:1:2:2:i1:o1:s0:n1,float32,layer1.0.bn1.bias,0)[64,][m
+[38;5;3m[w 0510 00:14:48.526443 60 grad.cc:77] grads[6] 'layer1.0.conv2.weight' doesn't have gradient. It will be set to zero: Var(194:1:3:3:i1:o2:s0:n1,float32,layer1.0.conv2.weight,0)[64,64,3,3,][m
+[38;5;3m[w 0510 00:14:48.526453 60 grad.cc:77] grads[7] 'layer1.0.bn2.weight' doesn't have gradient. It will be set to zero: Var(202:1:3:3:i1:o2:s0:n1,float32,layer1.0.bn2.weight,0)[64,][m
+[38;5;3m[w 0510 00:14:48.526462 60 grad.cc:77] grads[8] 'layer1.0.bn2.bias' doesn't have gradient. It will be set to zero: Var(207:1:2:2:i1:o1:s0:n1,float32,layer1.0.bn2.bias,0)[64,][m
+[38;5;3m[w 0510 00:14:48.526471 60 grad.cc:77] grads[9] 'layer1.0.conv3.weight' doesn't have gradient. It will be set to zero: Var(248:1:3:3:i1:o2:s0:n1,float32,layer1.0.conv3.weight,0)[256,64,1,1,][m
+[38;5;3m[w 0510 00:14:48.526481 60 grad.cc:77] grads[10] 'layer1.0.bn3.weight' doesn't have gradient. It will be set to zero: Var(256:1:3:3:i1:o2:s0:n1,float32,layer1.0.bn3.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.526489 60 grad.cc:77] grads[11] 'layer1.0.bn3.bias' doesn't have gradient. It will be set to zero: Var(261:1:2:2:i1:o1:s0:n1,float32,layer1.0.bn3.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.526497 60 grad.cc:77] grads[12] 'layer1.0.downsample.0.weight' doesn't have gradient. It will be set to zero: Var(86:1:3:3:i1:o2:s0:n1,float32,layer1.0.downsample.0.weight,0)[256,64,1,1,][m
+[38;5;3m[w 0510 00:14:48.526508 60 grad.cc:77] grads[13] 'layer1.0.downsample.1.weight' doesn't have gradient. It will be set to zero: Var(94:1:3:3:i1:o2:s0:n1,float32,layer1.0.downsample.1.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.538064 60 grad.cc:77] grads[14] 'layer1.0.downsample.1.bias' doesn't have gradient. It will be set to zero: Var(99:1:2:2:i1:o1:s0:n1,float32,layer1.0.downsample.1.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.538104 60 grad.cc:77] grads[15] 'layer1.1.conv1.weight' doesn't have gradient. It will be set to zero: Var(302:1:3:3:i1:o2:s0:n1,float32,layer1.1.conv1.weight,0)[64,256,1,1,][m
+[38;5;3m[w 0510 00:14:48.538128 60 grad.cc:77] grads[16] 'layer1.1.bn1.weight' doesn't have gradient. It will be set to zero: Var(310:1:3:3:i1:o2:s0:n1,float32,layer1.1.bn1.weight,0)[64,][m
+[38;5;3m[w 0510 00:14:48.538148 60 grad.cc:77] grads[17] 'layer1.1.bn1.bias' doesn't have gradient. It will be set to zero: Var(315:1:2:2:i1:o1:s0:n1,float32,layer1.1.bn1.bias,0)[64,][m
+[38;5;3m[w 0510 00:14:48.538169 60 grad.cc:77] grads[18] 'layer1.1.conv2.weight' doesn't have gradient. It will be set to zero: Var(356:1:3:3:i1:o2:s0:n1,float32,layer1.1.conv2.weight,0)[64,64,3,3,][m
+[38;5;3m[w 0510 00:14:48.538190 60 grad.cc:77] grads[19] 'layer1.1.bn2.weight' doesn't have gradient. It will be set to zero: Var(364:1:3:3:i1:o2:s0:n1,float32,layer1.1.bn2.weight,0)[64,][m
+[38;5;3m[w 0510 00:14:48.538209 60 grad.cc:77] grads[20] 'layer1.1.bn2.bias' doesn't have gradient. It will be set to zero: Var(369:1:2:2:i1:o1:s0:n1,float32,layer1.1.bn2.bias,0)[64,][m
+[38;5;3m[w 0510 00:14:48.538228 60 grad.cc:77] grads[21] 'layer1.1.conv3.weight' doesn't have gradient. It will be set to zero: Var(410:1:3:3:i1:o2:s0:n1,float32,layer1.1.conv3.weight,0)[256,64,1,1,][m
+[38;5;3m[w 0510 00:14:48.538249 60 grad.cc:77] grads[22] 'layer1.1.bn3.weight' doesn't have gradient. It will be set to zero: Var(418:1:3:3:i1:o2:s0:n1,float32,layer1.1.bn3.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.538279 60 grad.cc:77] grads[23] 'layer1.1.bn3.bias' doesn't have gradient. It will be set to zero: Var(423:1:2:2:i1:o1:s0:n1,float32,layer1.1.bn3.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.538299 60 grad.cc:77] grads[24] 'layer1.2.conv1.weight' doesn't have gradient. It will be set to zero: Var(464:1:3:3:i1:o2:s0:n1,float32,layer1.2.conv1.weight,0)[64,256,1,1,][m
+[38;5;3m[w 0510 00:14:48.549547 60 grad.cc:77] grads[25] 'layer1.2.bn1.weight' doesn't have gradient. It will be set to zero: Var(472:1:3:3:i1:o2:s0:n1,float32,layer1.2.bn1.weight,0)[64,][m
+[38;5;3m[w 0510 00:14:48.549588 60 grad.cc:77] grads[26] 'layer1.2.bn1.bias' doesn't have gradient. It will be set to zero: Var(477:1:2:2:i1:o1:s0:n1,float32,layer1.2.bn1.bias,0)[64,][m
+[38;5;3m[w 0510 00:14:48.549612 60 grad.cc:77] grads[27] 'layer1.2.conv2.weight' doesn't have gradient. It will be set to zero: Var(518:1:3:3:i1:o2:s0:n1,float32,layer1.2.conv2.weight,0)[64,64,3,3,][m
+[38;5;3m[w 0510 00:14:48.549633 60 grad.cc:77] grads[28] 'layer1.2.bn2.weight' doesn't have gradient. It will be set to zero: Var(526:1:3:3:i1:o2:s0:n1,float32,layer1.2.bn2.weight,0)[64,][m
+[38;5;3m[w 0510 00:14:48.549654 60 grad.cc:77] grads[29] 'layer1.2.bn2.bias' doesn't have gradient. It will be set to zero: Var(531:1:2:2:i1:o1:s0:n1,float32,layer1.2.bn2.bias,0)[64,][m
+[38;5;3m[w 0510 00:14:48.549676 60 grad.cc:77] grads[30] 'layer1.2.conv3.weight' doesn't have gradient. It will be set to zero: Var(572:1:3:3:i1:o2:s0:n1,float32,layer1.2.conv3.weight,0)[256,64,1,1,][m
+[38;5;3m[w 0510 00:14:48.549698 60 grad.cc:77] grads[31] 'layer1.2.bn3.weight' doesn't have gradient. It will be set to zero: Var(580:1:3:3:i1:o2:s0:n1,float32,layer1.2.bn3.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.549738 60 grad.cc:77] grads[32] 'layer1.2.bn3.bias' doesn't have gradient. It will be set to zero: Var(585:1:2:2:i1:o1:s0:n1,float32,layer1.2.bn3.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.561401 60 grad.cc:77] grads[33] 'layer2.0.conv1.weight' doesn't have gradient. It will be set to zero: Var(680:1:3:3:i1:o2:s0:n1,float32,layer2.0.conv1.weight,0)[128,256,1,1,][m
+[38;5;3m[w 0510 00:14:48.561446 60 grad.cc:77] grads[34] 'layer2.0.bn1.weight' doesn't have gradient. It will be set to zero: Var(688:1:3:3:i1:o2:s0:n1,float32,layer2.0.bn1.weight,0)[128,][m
+[38;5;3m[w 0510 00:14:48.561470 60 grad.cc:77] grads[35] 'layer2.0.bn1.bias' doesn't have gradient. It will be set to zero: Var(693:1:2:2:i1:o1:s0:n1,float32,layer2.0.bn1.bias,0)[128,][m
+[38;5;3m[w 0510 00:14:48.561491 60 grad.cc:77] grads[36] 'layer2.0.conv2.weight' doesn't have gradient. It will be set to zero: Var(734:1:3:3:i1:o2:s0:n1,float32,layer2.0.conv2.weight,0)[128,128,3,3,][m
+[38;5;3m[w 0510 00:14:48.561512 60 grad.cc:77] grads[37] 'layer2.0.bn2.weight' doesn't have gradient. It will be set to zero: Var(742:1:3:3:i1:o2:s0:n1,float32,layer2.0.bn2.weight,0)[128,][m
+[38;5;3m[w 0510 00:14:48.561533 60 grad.cc:77] grads[38] 'layer2.0.bn2.bias' doesn't have gradient. It will be set to zero: Var(747:1:2:2:i1:o1:s0:n1,float32,layer2.0.bn2.bias,0)[128,][m
+[38;5;3m[w 0510 00:14:48.561552 60 grad.cc:77] grads[39] 'layer2.0.conv3.weight' doesn't have gradient. It will be set to zero: Var(788:1:3:3:i1:o2:s0:n1,float32,layer2.0.conv3.weight,0)[512,128,1,1,][m
+[38;5;3m[w 0510 00:14:48.561573 60 grad.cc:77] grads[40] 'layer2.0.bn3.weight' doesn't have gradient. It will be set to zero: Var(796:1:3:3:i1:o2:s0:n1,float32,layer2.0.bn3.weight,0)[512,][m
+[38;5;3m[w 0510 00:14:48.561592 60 grad.cc:77] grads[41] 'layer2.0.bn3.bias' doesn't have gradient. It will be set to zero: Var(801:1:2:2:i1:o1:s0:n1,float32,layer2.0.bn3.bias,0)[512,][m
+[38;5;3m[w 0510 00:14:48.561612 60 grad.cc:77] grads[42] 'layer2.0.downsample.0.weight' doesn't have gradient. It will be set to zero: Var(626:1:3:3:i1:o2:s0:n1,float32,layer2.0.downsample.0.weight,0)[512,256,1,1,][m
+[38;5;3m[w 0510 00:14:48.561634 60 grad.cc:77] grads[43] 'layer2.0.downsample.1.weight' doesn't have gradient. It will be set to zero: Var(634:1:3:3:i1:o2:s0:n1,float32,layer2.0.downsample.1.weight,0)[512,][m
+[38;5;3m[w 0510 00:14:48.561666 60 grad.cc:77] grads[44] 'layer2.0.downsample.1.bias' doesn't have gradient. It will be set to zero: Var(639:1:2:2:i1:o1:s0:n1,float32,layer2.0.downsample.1.bias,0)[512,][m
+[38;5;3m[w 0510 00:14:48.561686 60 grad.cc:77] grads[45] 'layer2.1.conv1.weight' doesn't have gradient. It will be set to zero: Var(842:1:3:3:i1:o2:s0:n1,float32,layer2.1.conv1.weight,0)[128,512,1,1,][m
+[38;5;3m[w 0510 00:14:48.561706 60 grad.cc:77] grads[46] 'layer2.1.bn1.weight' doesn't have gradient. It will be set to zero: Var(850:1:3:3:i1:o2:s0:n1,float32,layer2.1.bn1.weight,0)[128,][m
+[38;5;3m[w 0510 00:14:48.561746 60 grad.cc:77] grads[47] 'layer2.1.bn1.bias' doesn't have gradient. It will be set to zero: Var(855:1:2:2:i1:o1:s0:n1,float32,layer2.1.bn1.bias,0)[128,][m
+[38;5;3m[w 0510 00:14:48.573246 60 grad.cc:77] grads[48] 'layer2.1.conv2.weight' doesn't have gradient. It will be set to zero: Var(896:1:3:3:i1:o2:s0:n1,float32,layer2.1.conv2.weight,0)[128,128,3,3,][m
+[38;5;3m[w 0510 00:14:48.573290 60 grad.cc:77] grads[49] 'layer2.1.bn2.weight' doesn't have gradient. It will be set to zero: Var(904:1:3:3:i1:o2:s0:n1,float32,layer2.1.bn2.weight,0)[128,][m
+[38;5;3m[w 0510 00:14:48.573313 60 grad.cc:77] grads[50] 'layer2.1.bn2.bias' doesn't have gradient. It will be set to zero: Var(909:1:2:2:i1:o1:s0:n1,float32,layer2.1.bn2.bias,0)[128,][m
+[38;5;3m[w 0510 00:14:48.573333 60 grad.cc:77] grads[51] 'layer2.1.conv3.weight' doesn't have gradient. It will be set to zero: Var(950:1:3:3:i1:o2:s0:n1,float32,layer2.1.conv3.weight,0)[512,128,1,1,][m
+[38;5;3m[w 0510 00:14:48.573356 60 grad.cc:77] grads[52] 'layer2.1.bn3.weight' doesn't have gradient. It will be set to zero: Var(958:1:3:3:i1:o2:s0:n1,float32,layer2.1.bn3.weight,0)[512,][m
+[38;5;3m[w 0510 00:14:48.573377 60 grad.cc:77] grads[53] 'layer2.1.bn3.bias' doesn't have gradient. It will be set to zero: Var(963:1:2:2:i1:o1:s0:n1,float32,layer2.1.bn3.bias,0)[512,][m
+[38;5;3m[w 0510 00:14:48.573397 60 grad.cc:77] grads[54] 'layer2.2.conv1.weight' doesn't have gradient. It will be set to zero: Var(1004:1:3:3:i1:o2:s0:n1,float32,layer2.2.conv1.weight,0)[128,512,1,1,][m
+[38;5;3m[w 0510 00:14:48.573418 60 grad.cc:77] grads[55] 'layer2.2.bn1.weight' doesn't have gradient. It will be set to zero: Var(1012:1:3:3:i1:o2:s0:n1,float32,layer2.2.bn1.weight,0)[128,][m
+[38;5;3m[w 0510 00:14:48.573438 60 grad.cc:77] grads[56] 'layer2.2.bn1.bias' doesn't have gradient. It will be set to zero: Var(1017:1:2:2:i1:o1:s0:n1,float32,layer2.2.bn1.bias,0)[128,][m
+[38;5;3m[w 0510 00:14:48.573459 60 grad.cc:77] grads[57] 'layer2.2.conv2.weight' doesn't have gradient. It will be set to zero: Var(1058:1:3:3:i1:o2:s0:n1,float32,layer2.2.conv2.weight,0)[128,128,3,3,][m
+[38;5;3m[w 0510 00:14:48.573479 60 grad.cc:77] grads[58] 'layer2.2.bn2.weight' doesn't have gradient. It will be set to zero: Var(1066:1:3:3:i1:o2:s0:n1,float32,layer2.2.bn2.weight,0)[128,][m
+[38;5;3m[w 0510 00:14:48.584407 60 grad.cc:77] grads[59] 'layer2.2.bn2.bias' doesn't have gradient. It will be set to zero: Var(1071:1:2:2:i1:o1:s0:n1,float32,layer2.2.bn2.bias,0)[128,][m
+[38;5;3m[w 0510 00:14:48.584439 60 grad.cc:77] grads[60] 'layer2.2.conv3.weight' doesn't have gradient. It will be set to zero: Var(1112:1:3:3:i1:o2:s0:n1,float32,layer2.2.conv3.weight,0)[512,128,1,1,][m
+[38;5;3m[w 0510 00:14:48.584456 60 grad.cc:77] grads[61] 'layer2.2.bn3.weight' doesn't have gradient. It will be set to zero: Var(1120:1:3:3:i1:o2:s0:n1,float32,layer2.2.bn3.weight,0)[512,][m
+[38;5;3m[w 0510 00:14:48.584470 60 grad.cc:77] grads[62] 'layer2.2.bn3.bias' doesn't have gradient. It will be set to zero: Var(1125:1:2:2:i1:o1:s0:n1,float32,layer2.2.bn3.bias,0)[512,][m
+[38;5;3m[w 0510 00:14:48.584484 60 grad.cc:77] grads[63] 'layer2.3.conv1.weight' doesn't have gradient. It will be set to zero: Var(1166:1:3:3:i1:o2:s0:n1,float32,layer2.3.conv1.weight,0)[128,512,1,1,][m
+[38;5;3m[w 0510 00:14:48.584499 60 grad.cc:77] grads[64] 'layer2.3.bn1.weight' doesn't have gradient. It will be set to zero: Var(1174:1:3:3:i1:o2:s0:n1,float32,layer2.3.bn1.weight,0)[128,][m
+[38;5;3m[w 0510 00:14:48.584520 60 grad.cc:77] grads[65] 'layer2.3.bn1.bias' doesn't have gradient. It will be set to zero: Var(1179:1:2:2:i1:o1:s0:n1,float32,layer2.3.bn1.bias,0)[128,][m
+[38;5;3m[w 0510 00:14:48.584534 60 grad.cc:77] grads[66] 'layer2.3.conv2.weight' doesn't have gradient. It will be set to zero: Var(1220:1:3:3:i1:o2:s0:n1,float32,layer2.3.conv2.weight,0)[128,128,3,3,][m
+[38;5;3m[w 0510 00:14:48.584548 60 grad.cc:77] grads[67] 'layer2.3.bn2.weight' doesn't have gradient. It will be set to zero: Var(1228:1:3:3:i1:o2:s0:n1,float32,layer2.3.bn2.weight,0)[128,][m
+[38;5;3m[w 0510 00:14:48.584562 60 grad.cc:77] grads[68] 'layer2.3.bn2.bias' doesn't have gradient. It will be set to zero: Var(1233:1:2:2:i1:o1:s0:n1,float32,layer2.3.bn2.bias,0)[128,][m
+[38;5;3m[w 0510 00:14:48.584575 60 grad.cc:77] grads[69] 'layer2.3.conv3.weight' doesn't have gradient. It will be set to zero: Var(1274:1:3:3:i1:o2:s0:n1,float32,layer2.3.conv3.weight,0)[512,128,1,1,][m
+[38;5;3m[w 0510 00:14:48.584588 60 grad.cc:77] grads[70] 'layer2.3.bn3.weight' doesn't have gradient. It will be set to zero: Var(1282:1:3:3:i1:o2:s0:n1,float32,layer2.3.bn3.weight,0)[512,][m
+[38;5;3m[w 0510 00:14:48.584602 60 grad.cc:77] grads[71] 'layer2.3.bn3.bias' doesn't have gradient. It will be set to zero: Var(1287:1:2:2:i1:o1:s0:n1,float32,layer2.3.bn3.bias,0)[512,][m
+[38;5;3m[w 0510 00:14:48.584614 60 grad.cc:77] grads[72] 'layer3.0.conv1.weight' doesn't have gradient. It will be set to zero: Var(1382:1:3:3:i1:o2:s0:n1,float32,layer3.0.conv1.weight,0)[256,512,1,1,][m
+[38;5;3m[w 0510 00:14:48.584628 60 grad.cc:77] grads[73] 'layer3.0.bn1.weight' doesn't have gradient. It will be set to zero: Var(1390:1:3:3:i1:o2:s0:n1,float32,layer3.0.bn1.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.584641 60 grad.cc:77] grads[74] 'layer3.0.bn1.bias' doesn't have gradient. It will be set to zero: Var(1395:1:2:2:i1:o1:s0:n1,float32,layer3.0.bn1.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.584654 60 grad.cc:77] grads[75] 'layer3.0.conv2.weight' doesn't have gradient. It will be set to zero: Var(1436:1:3:3:i1:o2:s0:n1,float32,layer3.0.conv2.weight,0)[256,256,3,3,][m
+[38;5;3m[w 0510 00:14:48.584668 60 grad.cc:77] grads[76] 'layer3.0.bn2.weight' doesn't have gradient. It will be set to zero: Var(1444:1:3:3:i1:o2:s0:n1,float32,layer3.0.bn2.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.584680 60 grad.cc:77] grads[77] 'layer3.0.bn2.bias' doesn't have gradient. It will be set to zero: Var(1449:1:2:2:i1:o1:s0:n1,float32,layer3.0.bn2.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.584718 60 grad.cc:77] grads[78] 'layer3.0.conv3.weight' doesn't have gradient. It will be set to zero: Var(1490:1:3:3:i1:o2:s0:n1,float32,layer3.0.conv3.weight,0)[1024,256,1,1,][m
+[38;5;3m[w 0510 00:14:48.584738 60 grad.cc:77] grads[79] 'layer3.0.bn3.weight' doesn't have gradient. It will be set to zero: Var(1498:1:3:3:i1:o2:s0:n1,float32,layer3.0.bn3.weight,0)[1024,][m
+[38;5;3m[w 0510 00:14:48.584758 60 grad.cc:77] grads[80] 'layer3.0.bn3.bias' doesn't have gradient. It will be set to zero: Var(1503:1:2:2:i1:o1:s0:n1,float32,layer3.0.bn3.bias,0)[1024,][m
+[38;5;3m[w 0510 00:14:48.584778 60 grad.cc:77] grads[81] 'layer3.0.downsample.0.weight' doesn't have gradient. It will be set to zero: Var(1328:1:3:3:i1:o2:s0:n1,float32,layer3.0.downsample.0.weight,0)[1024,512,1,1,][m
+[38;5;3m[w 0510 00:14:48.584800 60 grad.cc:77] grads[82] 'layer3.0.downsample.1.weight' doesn't have gradient. It will be set to zero: Var(1336:1:3:3:i1:o2:s0:n1,float32,layer3.0.downsample.1.weight,0)[1024,][m
+[38;5;3m[w 0510 00:14:48.584821 60 grad.cc:77] grads[83] 'layer3.0.downsample.1.bias' doesn't have gradient. It will be set to zero: Var(1341:1:2:2:i1:o1:s0:n1,float32,layer3.0.downsample.1.bias,0)[1024,][m
+[38;5;3m[w 0510 00:14:48.596514 60 grad.cc:77] grads[84] 'layer3.1.conv1.weight' doesn't have gradient. It will be set to zero: Var(1544:1:3:3:i1:o2:s0:n1,float32,layer3.1.conv1.weight,0)[256,1024,1,1,][m
+[38;5;3m[w 0510 00:14:48.596564 60 grad.cc:77] grads[85] 'layer3.1.bn1.weight' doesn't have gradient. It will be set to zero: Var(1552:1:3:3:i1:o2:s0:n1,float32,layer3.1.bn1.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.596596 60 grad.cc:77] grads[86] 'layer3.1.bn1.bias' doesn't have gradient. It will be set to zero: Var(1557:1:2:2:i1:o1:s0:n1,float32,layer3.1.bn1.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.596614 60 grad.cc:77] grads[87] 'layer3.1.conv2.weight' doesn't have gradient. It will be set to zero: Var(1598:1:3:3:i1:o2:s0:n1,float32,layer3.1.conv2.weight,0)[256,256,3,3,][m
+[38;5;3m[w 0510 00:14:48.596634 60 grad.cc:77] grads[88] 'layer3.1.bn2.weight' doesn't have gradient. It will be set to zero: Var(1606:1:3:3:i1:o2:s0:n1,float32,layer3.1.bn2.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.596650 60 grad.cc:77] grads[89] 'layer3.1.bn2.bias' doesn't have gradient. It will be set to zero: Var(1611:1:2:2:i1:o1:s0:n1,float32,layer3.1.bn2.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.596667 60 grad.cc:77] grads[90] 'layer3.1.conv3.weight' doesn't have gradient. It will be set to zero: Var(1652:1:3:3:i1:o2:s0:n1,float32,layer3.1.conv3.weight,0)[1024,256,1,1,][m
+[38;5;3m[w 0510 00:14:48.596684 60 grad.cc:77] grads[91] 'layer3.1.bn3.weight' doesn't have gradient. It will be set to zero: Var(1660:1:3:3:i1:o2:s0:n1,float32,layer3.1.bn3.weight,0)[1024,][m
+[38;5;3m[w 0510 00:14:48.596700 60 grad.cc:77] grads[92] 'layer3.1.bn3.bias' doesn't have gradient. It will be set to zero: Var(1665:1:2:2:i1:o1:s0:n1,float32,layer3.1.bn3.bias,0)[1024,][m
+[38;5;3m[w 0510 00:14:48.596717 60 grad.cc:77] grads[93] 'layer3.2.conv1.weight' doesn't have gradient. It will be set to zero: Var(1706:1:3:3:i1:o2:s0:n1,float32,layer3.2.conv1.weight,0)[256,1024,1,1,][m
+[38;5;3m[w 0510 00:14:48.596734 60 grad.cc:77] grads[94] 'layer3.2.bn1.weight' doesn't have gradient. It will be set to zero: Var(1714:1:3:3:i1:o2:s0:n1,float32,layer3.2.bn1.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.596750 60 grad.cc:77] grads[95] 'layer3.2.bn1.bias' doesn't have gradient. It will be set to zero: Var(1719:1:2:2:i1:o1:s0:n1,float32,layer3.2.bn1.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.596767 60 grad.cc:77] grads[96] 'layer3.2.conv2.weight' doesn't have gradient. It will be set to zero: Var(1760:1:3:3:i1:o2:s0:n1,float32,layer3.2.conv2.weight,0)[256,256,3,3,][m
+[38;5;3m[w 0510 00:14:48.596784 60 grad.cc:77] grads[97] 'layer3.2.bn2.weight' doesn't have gradient. It will be set to zero: Var(1768:1:3:3:i1:o2:s0:n1,float32,layer3.2.bn2.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.596800 60 grad.cc:77] grads[98] 'layer3.2.bn2.bias' doesn't have gradient. It will be set to zero: Var(1773:1:2:2:i1:o1:s0:n1,float32,layer3.2.bn2.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.596817 60 grad.cc:77] grads[99] 'layer3.2.conv3.weight' doesn't have gradient. It will be set to zero: Var(1814:1:3:3:i1:o2:s0:n1,float32,layer3.2.conv3.weight,0)[1024,256,1,1,][m
+[38;5;3m[w 0510 00:14:48.596834 60 grad.cc:77] grads[100] 'layer3.2.bn3.weight' doesn't have gradient. It will be set to zero: Var(1822:1:3:3:i1:o2:s0:n1,float32,layer3.2.bn3.weight,0)[1024,][m
+[38;5;3m[w 0510 00:14:48.607984 60 grad.cc:77] grads[101] 'layer3.2.bn3.bias' doesn't have gradient. It will be set to zero: Var(1827:1:2:2:i1:o1:s0:n1,float32,layer3.2.bn3.bias,0)[1024,][m
+[38;5;3m[w 0510 00:14:48.608014 60 grad.cc:77] grads[102] 'layer3.3.conv1.weight' doesn't have gradient. It will be set to zero: Var(1868:1:3:3:i1:o2:s0:n1,float32,layer3.3.conv1.weight,0)[256,1024,1,1,][m
+[38;5;3m[w 0510 00:14:48.608031 60 grad.cc:77] grads[103] 'layer3.3.bn1.weight' doesn't have gradient. It will be set to zero: Var(1876:1:3:3:i1:o2:s0:n1,float32,layer3.3.bn1.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.608045 60 grad.cc:77] grads[104] 'layer3.3.bn1.bias' doesn't have gradient. It will be set to zero: Var(1881:1:2:2:i1:o1:s0:n1,float32,layer3.3.bn1.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.608060 60 grad.cc:77] grads[105] 'layer3.3.conv2.weight' doesn't have gradient. It will be set to zero: Var(1922:1:3:3:i1:o2:s0:n1,float32,layer3.3.conv2.weight,0)[256,256,3,3,][m
+[38;5;3m[w 0510 00:14:48.608083 60 grad.cc:77] grads[106] 'layer3.3.bn2.weight' doesn't have gradient. It will be set to zero: Var(1930:1:3:3:i1:o2:s0:n1,float32,layer3.3.bn2.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.608096 60 grad.cc:77] grads[107] 'layer3.3.bn2.bias' doesn't have gradient. It will be set to zero: Var(1935:1:2:2:i1:o1:s0:n1,float32,layer3.3.bn2.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.608111 60 grad.cc:77] grads[108] 'layer3.3.conv3.weight' doesn't have gradient. It will be set to zero: Var(1976:1:3:3:i1:o2:s0:n1,float32,layer3.3.conv3.weight,0)[1024,256,1,1,][m
+[38;5;3m[w 0510 00:14:48.608124 60 grad.cc:77] grads[109] 'layer3.3.bn3.weight' doesn't have gradient. It will be set to zero: Var(1984:1:3:3:i1:o2:s0:n1,float32,layer3.3.bn3.weight,0)[1024,][m
+[38;5;3m[w 0510 00:14:48.608137 60 grad.cc:77] grads[110] 'layer3.3.bn3.bias' doesn't have gradient. It will be set to zero: Var(1989:1:2:2:i1:o1:s0:n1,float32,layer3.3.bn3.bias,0)[1024,][m
+[38;5;3m[w 0510 00:14:48.608168 60 grad.cc:77] grads[111] 'layer3.4.conv1.weight' doesn't have gradient. It will be set to zero: Var(2030:1:3:3:i1:o2:s0:n1,float32,layer3.4.conv1.weight,0)[256,1024,1,1,][m
+[38;5;3m[w 0510 00:14:48.608187 60 grad.cc:77] grads[112] 'layer3.4.bn1.weight' doesn't have gradient. It will be set to zero: Var(2038:1:3:3:i1:o2:s0:n1,float32,layer3.4.bn1.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.608204 60 grad.cc:77] grads[113] 'layer3.4.bn1.bias' doesn't have gradient. It will be set to zero: Var(2043:1:2:2:i1:o1:s0:n1,float32,layer3.4.bn1.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.608221 60 grad.cc:77] grads[114] 'layer3.4.conv2.weight' doesn't have gradient. It will be set to zero: Var(2084:1:3:3:i1:o2:s0:n1,float32,layer3.4.conv2.weight,0)[256,256,3,3,][m
+[38;5;3m[w 0510 00:14:48.608238 60 grad.cc:77] grads[115] 'layer3.4.bn2.weight' doesn't have gradient. It will be set to zero: Var(2092:1:3:3:i1:o2:s0:n1,float32,layer3.4.bn2.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.608254 60 grad.cc:77] grads[116] 'layer3.4.bn2.bias' doesn't have gradient. It will be set to zero: Var(2097:1:2:2:i1:o1:s0:n1,float32,layer3.4.bn2.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.608271 60 grad.cc:77] grads[117] 'layer3.4.conv3.weight' doesn't have gradient. It will be set to zero: Var(2138:1:3:3:i1:o2:s0:n1,float32,layer3.4.conv3.weight,0)[1024,256,1,1,][m
+[38;5;3m[w 0510 00:14:48.608289 60 grad.cc:77] grads[118] 'layer3.4.bn3.weight' doesn't have gradient. It will be set to zero: Var(2146:1:3:3:i1:o2:s0:n1,float32,layer3.4.bn3.weight,0)[1024,][m
+[38;5;3m[w 0510 00:14:48.608307 60 grad.cc:77] grads[119] 'layer3.4.bn3.bias' doesn't have gradient. It will be set to zero: Var(2151:1:2:2:i1:o1:s0:n1,float32,layer3.4.bn3.bias,0)[1024,][m
+[38;5;3m[w 0510 00:14:48.608324 60 grad.cc:77] grads[120] 'layer3.5.conv1.weight' doesn't have gradient. It will be set to zero: Var(2192:1:3:3:i1:o2:s0:n1,float32,layer3.5.conv1.weight,0)[256,1024,1,1,][m
+[38;5;3m[w 0510 00:14:48.608343 60 grad.cc:77] grads[121] 'layer3.5.bn1.weight' doesn't have gradient. It will be set to zero: Var(2200:1:3:3:i1:o2:s0:n1,float32,layer3.5.bn1.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.619779 60 grad.cc:77] grads[122] 'layer3.5.bn1.bias' doesn't have gradient. It will be set to zero: Var(2205:1:2:2:i1:o1:s0:n1,float32,layer3.5.bn1.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.619810 60 grad.cc:77] grads[123] 'layer3.5.conv2.weight' doesn't have gradient. It will be set to zero: Var(2246:1:3:3:i1:o2:s0:n1,float32,layer3.5.conv2.weight,0)[256,256,3,3,][m
+[38;5;3m[w 0510 00:14:48.619828 60 grad.cc:77] grads[124] 'layer3.5.bn2.weight' doesn't have gradient. It will be set to zero: Var(2254:1:3:3:i1:o2:s0:n1,float32,layer3.5.bn2.weight,0)[256,][m
+[38;5;3m[w 0510 00:14:48.619842 60 grad.cc:77] grads[125] 'layer3.5.bn2.bias' doesn't have gradient. It will be set to zero: Var(2259:1:2:2:i1:o1:s0:n1,float32,layer3.5.bn2.bias,0)[256,][m
+[38;5;3m[w 0510 00:14:48.619856 60 grad.cc:77] grads[126] 'layer3.5.conv3.weight' doesn't have gradient. It will be set to zero: Var(2300:1:3:3:i1:o2:s0:n1,float32,layer3.5.conv3.weight,0)[1024,256,1,1,][m
+[38;5;3m[w 0510 00:14:48.619883 60 grad.cc:77] grads[127] 'layer3.5.bn3.weight' doesn't have gradient. It will be set to zero: Var(2308:1:3:3:i1:o2:s0:n1,float32,layer3.5.bn3.weight,0)[1024,][m
+[38;5;3m[w 0510 00:14:48.619896 60 grad.cc:77] grads[128] 'layer3.5.bn3.bias' doesn't have gradient. It will be set to zero: Var(2313:1:2:2:i1:o1:s0:n1,float32,layer3.5.bn3.bias,0)[1024,][m
+[38;5;3m[w 0510 00:14:48.619909 60 grad.cc:77] grads[129] 'layer4.0.conv1.weight' doesn't have gradient. It will be set to zero: Var(2408:1:3:3:i1:o2:s0:n1,float32,layer4.0.conv1.weight,0)[512,1024,1,1,][m
+[38;5;3m[w 0510 00:14:48.619922 60 grad.cc:77] grads[130] 'layer4.0.bn1.weight' doesn't have gradient. It will be set to zero: Var(2416:1:3:3:i1:o2:s0:n1,float32,layer4.0.bn1.weight,0)[512,][m
+[38;5;3m[w 0510 00:14:48.619934 60 grad.cc:77] grads[131] 'layer4.0.bn1.bias' doesn't have gradient. It will be set to zero: Var(2421:1:2:2:i1:o1:s0:n1,float32,layer4.0.bn1.bias,0)[512,][m
+[38;5;3m[w 0510 00:14:48.619968 60 grad.cc:77] grads[132] 'layer4.0.conv2.weight' doesn't have gradient. It will be set to zero: Var(2462:1:3:3:i1:o2:s0:n1,float32,layer4.0.conv2.weight,0)[512,512,3,3,][m
+[38;5;3m[w 0510 00:14:48.631569 60 grad.cc:77] grads[133] 'layer4.0.bn2.weight' doesn't have gradient. It will be set to zero: Var(2470:1:3:3:i1:o2:s0:n1,float32,layer4.0.bn2.weight,0)[512,][m
+[38;5;3m[w 0510 00:14:48.631598 60 grad.cc:77] grads[134] 'layer4.0.bn2.bias' doesn't have gradient. It will be set to zero: Var(2475:1:2:2:i1:o1:s0:n1,float32,layer4.0.bn2.bias,0)[512,][m
+[38;5;3m[w 0510 00:14:48.631613 60 grad.cc:77] grads[135] 'layer4.0.conv3.weight' doesn't have gradient. It will be set to zero: Var(2516:1:3:3:i1:o2:s0:n1,float32,layer4.0.conv3.weight,0)[2048,512,1,1,][m
+[38;5;3m[w 0510 00:14:48.631627 60 grad.cc:77] grads[136] 'layer4.0.bn3.weight' doesn't have gradient. It will be set to zero: Var(2524:1:3:3:i1:o2:s0:n1,float32,layer4.0.bn3.weight,0)[2048,][m
+[38;5;3m[w 0510 00:14:48.631640 60 grad.cc:77] grads[137] 'layer4.0.bn3.bias' doesn't have gradient. It will be set to zero: Var(2529:1:2:2:i1:o1:s0:n1,float32,layer4.0.bn3.bias,0)[2048,][m
+[38;5;3m[w 0510 00:14:48.631653 60 grad.cc:77] grads[138] 'layer4.0.downsample.0.weight' doesn't have gradient. It will be set to zero: Var(2354:1:3:3:i1:o2:s0:n1,float32,layer4.0.downsample.0.weight,0)[2048,1024,1,1,][m
+[38;5;3m[w 0510 00:14:48.631666 60 grad.cc:77] grads[139] 'layer4.0.downsample.1.weight' doesn't have gradient. It will be set to zero: Var(2362:1:3:3:i1:o2:s0:n1,float32,layer4.0.downsample.1.weight,0)[2048,][m
+[38;5;3m[w 0510 00:14:48.631679 60 grad.cc:77] grads[140] 'layer4.0.downsample.1.bias' doesn't have gradient. It will be set to zero: Var(2367:1:2:2:i1:o1:s0:n1,float32,layer4.0.downsample.1.bias,0)[2048,][m
+[38;5;3m[w 0510 00:14:48.631691 60 grad.cc:77] grads[141] 'layer4.1.conv1.weight' doesn't have gradient. It will be set to zero: Var(2570:1:3:3:i1:o2:s0:n1,float32,layer4.1.conv1.weight,0)[512,2048,1,1,][m
+[38;5;3m[w 0510 00:14:48.631704 60 grad.cc:77] grads[142] 'layer4.1.bn1.weight' doesn't have gradient. It will be set to zero: Var(2578:1:3:3:i1:o2:s0:n1,float32,layer4.1.bn1.weight,0)[512,][m
+[38;5;3m[w 0510 00:14:48.631717 60 grad.cc:77] grads[143] 'layer4.1.bn1.bias' doesn't have gradient. It will be set to zero: Var(2583:1:2:2:i1:o1:s0:n1,float32,layer4.1.bn1.bias,0)[512,][m
+[38;5;3m[w 0510 00:14:48.631729 60 grad.cc:77] grads[144] 'layer4.1.conv2.weight' doesn't have gradient. It will be set to zero: Var(2624:1:3:3:i1:o2:s0:n1,float32,layer4.1.conv2.weight,0)[512,512,3,3,][m
+[38;5;3m[w 0510 00:14:48.631741 60 grad.cc:77] grads[145] 'layer4.1.bn2.weight' doesn't have gradient. It will be set to zero: Var(2632:1:3:3:i1:o2:s0:n1,float32,layer4.1.bn2.weight,0)[512,][m
+[38;5;3m[w 0510 00:14:48.631753 60 grad.cc:77] grads[146] 'layer4.1.bn2.bias' doesn't have gradient. It will be set to zero: Var(2637:1:2:2:i1:o1:s0:n1,float32,layer4.1.bn2.bias,0)[512,][m
+[38;5;3m[w 0510 00:14:48.631772 60 grad.cc:77] grads[147] 'layer4.1.conv3.weight' doesn't have gradient. It will be set to zero: Var(2678:1:3:3:i1:o2:s0:n1,float32,layer4.1.conv3.weight,0)[2048,512,1,1,][m
+[38;5;3m[w 0510 00:14:48.631787 60 grad.cc:77] grads[148] 'layer4.1.bn3.weight' doesn't have gradient. It will be set to zero: Var(2686:1:3:3:i1:o2:s0:n1,float32,layer4.1.bn3.weight,0)[2048,][m
+[38;5;3m[w 0510 00:14:48.631801 60 grad.cc:77] grads[149] 'layer4.1.bn3.bias' doesn't have gradient. It will be set to zero: Var(2691:1:2:2:i1:o1:s0:n1,float32,layer4.1.bn3.bias,0)[2048,][m
+[38;5;3m[w 0510 00:14:48.631813 60 grad.cc:77] grads[150] 'layer4.2.conv1.weight' doesn't have gradient. It will be set to zero: Var(2732:1:3:3:i1:o2:s0:n1,float32,layer4.2.conv1.weight,0)[512,2048,1,1,][m
+[38;5;3m[w 0510 00:14:48.631825 60 grad.cc:77] grads[151] 'layer4.2.bn1.weight' doesn't have gradient. It will be set to zero: Var(2740:1:3:3:i1:o2:s0:n1,float32,layer4.2.bn1.weight,0)[512,][m
+[38;5;3m[w 0510 00:14:48.631856 60 grad.cc:77] grads[152] 'layer4.2.bn1.bias' doesn't have gradient. It will be set to zero: Var(2745:1:2:2:i1:o1:s0:n1,float32,layer4.2.bn1.bias,0)[512,][m
+[38;5;3m[w 0510 00:14:48.642883 60 grad.cc:77] grads[153] 'layer4.2.conv2.weight' doesn't have gradient. It will be set to zero: Var(2786:1:3:3:i1:o2:s0:n1,float32,layer4.2.conv2.weight,0)[512,512,3,3,][m
+[38;5;3m[w 0510 00:14:48.642913 60 grad.cc:77] grads[154] 'layer4.2.bn2.weight' doesn't have gradient. It will be set to zero: Var(2794:1:3:3:i1:o2:s0:n1,float32,layer4.2.bn2.weight,0)[512,][m
+[38;5;3m[w 0510 00:14:48.642928 60 grad.cc:77] grads[155] 'layer4.2.bn2.bias' doesn't have gradient. It will be set to zero: Var(2799:1:2:2:i1:o1:s0:n1,float32,layer4.2.bn2.bias,0)[512,][m
+[38;5;3m[w 0510 00:14:48.642942 60 grad.cc:77] grads[156] 'layer4.2.conv3.weight' doesn't have gradient. It will be set to zero: Var(2840:1:3:3:i1:o2:s0:n1,float32,layer4.2.conv3.weight,0)[2048,512,1,1,][m
+[38;5;3m[w 0510 00:14:48.642955 60 grad.cc:77] grads[157] 'layer4.2.bn3.weight' doesn't have gradient. It will be set to zero: Var(2848:1:3:3:i1:o2:s0:n1,float32,layer4.2.bn3.weight,0)[2048,][m
+[38;5;3m[w 0510 00:14:48.642967 60 grad.cc:77] grads[158] 'layer4.2.bn3.bias' doesn't have gradient. It will be set to zero: Var(2853:1:2:2:i1:o1:s0:n1,float32,layer4.2.bn3.bias,0)[2048,][m
+[38;5;3m[w 0510 00:14:48.642982 60 grad.cc:77] grads[159] 'fc.weight' doesn't have gradient. It will be set to zero: Var(2877:1:2:2:i1:o1:s0:n1,float32,fc.weight,0)[5001,2048,][m
+[38;5;3m[w 0510 00:14:48.642995 60 grad.cc:77] grads[160] 'fc.bias' doesn't have gradient. It will be set to zero: Var(2894:1:2:2:i1:o1:s0:n0,float32,fc.bias,0)[5001,][m
+index: 0 loss: 8.656902
+
+1it [00:02,  2.80s/it][A
+2it [00:04,  2.03s/it][A
+3it [00:05,  1.45s/it][A
+4it [00:05,  1.07s/it][A
+5it [00:06,  1.17it/s][A
+6it [00:06,  1.37it/s][A
+7it [00:06,  1.55it/s][A
+8it [00:07,  1.68it/s][A
+9it [00:07,  1.79it/s][A
+10it [00:08,  1.87it/s][A
+11it [00:08,  1.91it/s][A
+12it [00:09,  1.90it/s][A
+13it [00:09,  1.95it/s][A
+14it [00:10,  2.00it/s][A
+15it [00:10,  2.02it/s][A
+16it [00:11,  2.04it/s][A
+17it [00:11,  2.06it/s][A
+18it [00:12,  2.07it/s][A
+19it [00:12,  2.08it/s][A
+20it [00:13,  1.94it/s][A
+21it [00:13,  1.99it/s][A
+22it [00:14,  2.01it/s][A
+23it [00:14,  2.03it/s][A
+24it [00:15,  2.06it/s][A
+25it [00:15,  2.08it/s][A
+26it [00:16,  2.09it/s][A
+27it [00:16,  2.09it/s][A
+28it [00:17,  2.09it/s][A
+29it [00:17,  2.09it/s][A
+30it [00:18,  2.09it/s][A
+31it [00:18,  2.09it/s][A
+32it [00:19,  2.09it/s][A
+33it [00:19,  1.93it/s][A
+34it [00:20,  1.95it/s][A
+35it [00:20,  2.00it/s][A
+36it [00:21,  2.01it/s][A
+37it [00:21,  2.03it/s][A
+38it [00:22,  2.05it/s][A
+39it [00:22,  2.07it/s][A
+40it [00:23,  2.07it/s][A
+41it [00:23,  2.10it/s][A
+42it [00:24,  2.10it/s][A
+43it [00:24,  1.97it/s][A
+44it [00:25,  2.00it/s][A
+45it [00:25,  2.00it/s][A
+46it [00:26,  2.03it/s][A
+47it [00:26,  2.00it/s][A
+48it [00:27,  2.00it/s][A
+49it [00:27,  2.02it/s][A
+50it [00:28,  2.02it/s][A
+51it [00:28,  2.02it/s][A
+52it [00:29,  2.03it/s][A
+53it [00:29,  2.01it/s][A
+54it [00:30,  2.03it/s][A
+55it [00:30,  2.02it/s][A
+56it [00:31,  2.01it/s][A
+57it [00:31,  2.02it/s][A
+58it [00:32,  2.02it/s][A
+59it [00:32,  2.11it/s][A
+60it [00:32,  2.21it/s][A
+61it [00:33,  2.24it/s][A
+62it [00:33,  2.28it/s][A
+63it [00:34,  2.33it/s][A
+64it [00:34,  2.35it/s][A
+65it [00:34,  2.33it/s][A
+66it [00:35,  2.33it/s][A
+67it [00:35,  2.32it/s][A
+68it [00:36,  2.33it/s][A
+69it [00:36,  2.35it/s][A
+70it [00:37,  2.36it/s][A
+71it [00:37,  2.36it/s][A
+72it [00:37,  2.38it/s][A
+73it [00:38,  2.38it/s][A
+74it [00:38,  2.37it/s][A
+75it [00:39,  2.37it/s][A
+76it [00:39,  2.38it/s][A
+77it [00:40,  2.29it/s][A
+78it [00:40,  2.31it/s][A
+79it [00:40,  2.31it/s][A
+80it [00:41,  2.32it/s][A
+81it [00:41,  2.33it/s][A
+82it [00:42,  2.34it/s][A
+83it [00:42,  2.35it/s][A
+84it [00:43,  2.39it/s][A
+85it [00:43,  2.38it/s][A
+86it [00:43,  2.40it/s][A
+87it [00:44,  2.39it/s][A
+88it [00:44,  2.36it/s][A
+89it [00:45,  2.24it/s][A
+90it [00:45,  2.19it/s][A
+91it [00:46,  2.16it/s][A
+92it [00:46,  2.11it/s][A
+93it [00:47,  2.11it/s][A
+94it [00:47,  2.12it/s][A
+95it [00:48,  2.12it/s][A
+96it [00:48,  2.11it/s][A
+97it [00:49,  2.10it/s][A
+98it [00:49,  2.10it/s][A
+99it [00:50,  2.12it/s][A
+100it [00:50,  2.11it/s][A
+101it [00:50,  2.08it/s][A
+102it [00:51,  2.06it/s][A
+103it [00:51,  2.07it/s][A
+104it [00:52,  2.05it/s][A
+105it [00:52,  2.04it/s][A
+106it [00:53,  2.02it/s][A
+107it [00:53,  2.02it/s][A
+108it [00:54,  2.03it/s][A
+109it [00:54,  2.02it/s][A
+110it [00:55,  1.99it/s][A
+111it [00:55,  1.98it/s][A
+112it [00:56,  2.01it/s][A
+113it [00:56,  2.02it/s][A
+114it [00:57,  2.02it/s][A
+115it [00:57,  2.01it/s][A
+116it [00:58,  2.03it/s][A
+117it [00:58,  2.02it/s][A
+118it [00:59,  2.00it/s][A
+119it [00:59,  2.00it/s][A
+120it [01:00,  2.00it/s][A
+121it [01:00,  2.01it/s][A
+122it [01:01,  2.00it/s][A
+123it [01:01,  1.97it/s][A
+124it [01:02,  1.98it/s][A
+125it [01:02,  2.00it/s][A
+126it [01:03,  1.98it/s][A
+127it [01:03,  1.99it/s][A
+128it [01:04,  1.98it/s][A
+129it [01:04,  1.98it/s][A
+130it [01:05,  1.96it/s][A
+131it [01:06,  1.95it/s][A
+132it [01:06,  1.95it/s][A
+133it [01:07,  1.95it/s][A
+134it [01:07,  1.96it/s][A
+135it [01:08,  1.97it/s][A
+136it [01:08,  1.97it/s][A
+137it [01:09,  1.98it/s][A
+138it [01:09,  2.00it/s][A
+139it [01:10,  2.01it/s][A
+140it [01:10,  2.00it/s][A
+141it [01:11,  1.97it/s][A
+142it [01:11,  1.98it/s][A
+143it [01:12,  1.99it/s][A
+144it [01:12,  1.99it/s][A
+145it [01:13,  1.99it/s][A
+146it [01:13,  1.98it/s][A
+147it [01:14,  2.00it/s][A
+148it [01:14,  1.98it/s][A
+149it [01:15,  1.99it/s][A
+150it [01:15,  2.00it/s][A
+151it [01:16,  1.99it/s][A
+152it [01:16,  1.94it/s][A
+153it [01:17,  1.94it/s][A
+154it [01:17,  1.96it/s][A
+155it [01:18,  1.97it/s][A
+156it [01:18,  1.98it/s][A
+157it [01:19,  1.99it/s][A
+158it [01:19,  1.99it/s][A
+159it [01:20,  1.99it/s][A
+160it [01:20,  2.01it/s][A
+161it [01:21,  2.02it/s][A
+162it [01:21,  2.00it/s][A
+163it [01:22,  1.98it/s][A
+164it [01:22,  1.97it/s][A
+165it [01:23,  1.99it/s][A
+166it [01:23,  1.99it/s][A
+167it [01:24,  1.99it/s][A
+168it [01:24,  1.99it/s][A
+169it [01:25,  2.01it/s][A
+170it [01:25,  2.00it/s][A
+171it [01:26,  1.98it/s][A
+172it [01:26,  1.97it/s][A
+173it [01:27,  1.96it/s][A
+174it [01:27,  1.98it/s][A
+175it [01:28,  1.99it/s][A
+176it [01:28,  1.99it/s][A
+177it [01:29,  2.00it/s][A
+178it [01:29,  2.01it/s][A
+179it [01:30,  2.01it/s][A
+180it [01:30,  2.00it/s][A
+181it [01:31,  2.01it/s][A
+182it [01:31,  2.03it/s][A
+183it [01:32,  2.03it/s][A
+184it [01:32,  2.02it/s][A
+185it [01:33,  2.01it/s][A
+186it [01:33,  2.00it/s][A
+187it [01:34,  2.02it/s][A
+188it [01:34,  2.10it/s][A
+189it [01:34,  2.17it/s][A
+190it [01:35,  2.21it/s][A
+191it [01:35,  2.24it/s][A
+192it [01:36,  2.27it/s][A
+193it [01:36,  2.28it/s][A
+194it [01:37,  2.28it/s][A
+195it [01:37,  2.29it/s][A
+196it [01:38,  2.29it/s][A
+197it [01:38,  2.33it/s][A
+198it [01:38,  2.33it/s][A
+199it [01:39,  2.34it/s][A
+200it [01:39,  2.33it/s][Aindex: 200 loss: 8.676991
+
+201it [01:40,  2.26it/s][A
+202it [01:40,  2.17it/s][A
+203it [01:41,  2.13it/s][A
+204it [01:41,  2.08it/s][A
+205it [01:42,  2.03it/s][A
+206it [01:42,  2.01it/s][A
+207it [01:43,  2.02it/s][A
+208it [01:43,  2.00it/s][A
+209it [01:44,  1.98it/s][A
+210it [01:44,  1.99it/s][A
+211it [01:45,  2.01it/s][A
+212it [01:45,  2.00it/s][A
+213it [01:46,  2.00it/s][A
+214it [01:46,  2.03it/s][A
+215it [01:47,  2.05it/s][A
+216it [01:47,  2.09it/s][A
+217it [01:48,  2.10it/s][A
+218it [01:48,  2.10it/s][A
+219it [01:49,  2.08it/s][A
+220it [01:49,  2.10it/s][A
+221it [01:50,  2.09it/s][A
+222it [01:50,  2.09it/s][A
+223it [01:50,  2.10it/s][A
+224it [01:51,  2.10it/s][A
+225it [01:51,  2.10it/s][A
+226it [01:52,  2.09it/s][A
+227it [01:52,  2.06it/s][A
+228it [01:53,  2.07it/s][A
+229it [01:53,  2.01it/s][A
+230it [01:54,  2.03it/s][A
+231it [01:54,  2.05it/s][A
+232it [01:55,  2.07it/s][A
+233it [01:55,  2.08it/s][A
+234it [01:56,  2.09it/s][A
+235it [01:56,  2.10it/s][A
+236it [01:57,  2.09it/s][A
+237it [01:57,  2.06it/s][A
+238it [01:58,  2.09it/s][A
+239it [01:58,  2.10it/s][A
+240it [01:59,  2.10it/s][A
+241it [01:59,  2.09it/s][A
+242it [02:00,  2.10it/s][A
+243it [02:00,  2.11it/s][A
+244it [02:01,  2.10it/s][A
+245it [02:01,  2.11it/s][A
+246it [02:02,  2.12it/s][A
+247it [02:02,  2.11it/s][A
+248it [02:02,  2.12it/s][A
+249it [02:03,  2.11it/s][A
+250it [02:03,  2.10it/s][A
+251it [02:04,  2.09it/s][A
+252it [02:04,  2.10it/s][A
+253it [02:05,  2.11it/s][A
+254it [02:05,  2.12it/s][A
+255it [02:06,  2.11it/s][A
+256it [02:06,  2.10it/s][A
+257it [02:07,  2.11it/s][A
+258it [02:07,  2.08it/s][A
+259it [02:08,  2.06it/s][A
+260it [02:08,  2.06it/s][A
+261it [02:09,  2.06it/s][A
+262it [02:09,  2.09it/s][A
+263it [02:10,  2.09it/s][A
+264it [02:10,  2.09it/s][A
+265it [02:11,  2.09it/s][A
+266it [02:11,  2.09it/s][A
+267it [02:12,  2.09it/s][A
+268it [02:12,  2.07it/s][A
+269it [02:13,  2.01it/s][A
+270it [02:13,  2.02it/s][A
+271it [02:14,  2.00it/s][A
+272it [02:14,  2.02it/s][A
+273it [02:15,  2.02it/s][A
+274it [02:15,  2.03it/s][A
+275it [02:16,  2.06it/s][A
+276it [02:16,  2.05it/s][A
+277it [02:16,  2.06it/s][A
+278it [02:17,  2.08it/s][A
+279it [02:17,  2.05it/s][A
+280it [02:18,  2.07it/s][A
+281it [02:18,  2.04it/s][A
+282it [02:19,  2.03it/s][A
+283it [02:19,  2.03it/s][A
+284it [02:20,  2.05it/s][A
+285it [02:20,  2.04it/s][A
+286it [02:21,  2.04it/s][A
+287it [02:21,  2.03it/s][A
+288it [02:22,  2.04it/s][A
+289it [02:22,  2.04it/s][A
+290it [02:23,  2.00it/s][A
+291it [02:23,  1.99it/s][A
+292it [02:24,  1.98it/s][A
+293it [02:24,  2.00it/s][A
+294it [02:25,  2.00it/s][A
+295it [02:25,  1.99it/s][A
+296it [02:26,  1.98it/s][A
+297it [02:26,  1.98it/s][A
+298it [02:27,  2.00it/s][A
+299it [02:27,  1.97it/s][A
+300it [02:28,  1.96it/s][A
+301it [02:28,  1.98it/s][A
+302it [02:29,  1.99it/s][A
+303it [02:30,  1.91it/s][A
+304it [02:30,  1.92it/s][A
+305it [02:31,  1.95it/s][A
+306it [02:31,  1.99it/s][A
+307it [02:31,  2.00it/s][A
+308it [02:32,  2.01it/s][A
+309it [02:33,  1.98it/s][A
+310it [02:33,  1.99it/s][A
+311it [02:33,  2.00it/s][A
+312it [02:34,  2.01it/s][A
+313it [02:34,  2.00it/s][A
+314it [02:35,  2.00it/s][A
+315it [02:35,  2.00it/s][A
+316it [02:36,  2.00it/s][A
+317it [02:36,  1.99it/s][A
+318it [02:37,  1.99it/s][A
+319it [02:37,  2.01it/s][A
+320it [02:38,  2.02it/s][A
+321it [02:38,  2.00it/s][A
+322it [02:39,  2.02it/s][A
+323it [02:39,  2.01it/s][A
+324it [02:40,  2.02it/s][A
+325it [02:40,  2.01it/s][A
+326it [02:41,  2.00it/s][A
+327it [02:41,  2.00it/s][A
+328it [02:42,  2.00it/s][A
+329it [02:42,  2.01it/s][A
+330it [02:43,  2.00it/s][A
+331it [02:43,  2.00it/s][A
+332it [02:44,  2.00it/s][A
+333it [02:44,  2.02it/s][A
+334it [02:45,  2.00it/s][A
+335it [02:45,  2.00it/s][A
+336it [02:46,  2.00it/s][A
+337it [02:46,  2.01it/s][A
+338it [02:47,  2.00it/s][A
+339it [02:48,  1.89it/s][A
+340it [02:48,  1.94it/s][A
+341it [02:49,  1.96it/s][A
+342it [02:49,  1.99it/s][A
+343it [02:50,  2.01it/s][A
+344it [02:50,  2.03it/s][A
+345it [02:51,  1.97it/s][A
+346it [02:51,  2.02it/s][A
+347it [02:51,  2.03it/s][A
+348it [02:52,  2.03it/s][A
+349it [02:53,  1.92it/s][A
+350it [02:53,  1.98it/s][A
+351it [02:54,  2.00it/s][A
+352it [02:54,  2.01it/s][A
+353it [02:54,  2.04it/s][A
+354it [02:55,  2.06it/s][A
+355it [02:55,  2.08it/s][A
+356it [02:56,  2.08it/s][A
+357it [02:56,  2.08it/s][A
+358it [02:57,  2.06it/s][A
+359it [02:57,  2.07it/s][A
+360it [02:58,  2.08it/s][A
+361it [02:58,  2.06it/s][A
+362it [02:59,  2.06it/s][A
+363it [02:59,  2.06it/s][A
+364it [03:00,  2.08it/s][A
+365it [03:00,  2.07it/s][A
+366it [03:01,  2.06it/s][A
+367it [03:01,  2.04it/s][A
+368it [03:02,  2.02it/s][A
+369it [03:02,  2.03it/s][A
+370it [03:03,  1.90it/s][A
+371it [03:03,  1.93it/s][A
+372it [03:04,  1.93it/s][A
+373it [03:04,  1.97it/s][A
+374it [03:05,  1.98it/s][A
+375it [03:05,  1.98it/s][A
+376it [03:06,  1.89it/s][A
+377it [03:06,  1.91it/s][A
+378it [03:07,  1.93it/s][A
+379it [03:07,  1.95it/s][A
+380it [03:08,  1.91it/s][A
+381it [03:09,  1.92it/s][A
+382it [03:09,  1.95it/s][A
+383it [03:10,  1.96it/s][A
+384it [03:10,  1.97it/s][A
+385it [03:11,  1.99it/s][A
+386it [03:11,  2.01it/s][A
+387it [03:12,  2.01it/s][A
+388it [03:12,  2.01it/s][A
+389it [03:13,  2.01it/s][A
+390it [03:13,  1.79it/s][A
+391it [03:14,  1.84it/s][A
+392it [03:14,  1.87it/s][A
+393it [03:15,  1.91it/s][A
+394it [03:15,  1.95it/s][A
+395it [03:16,  1.93it/s][A
+396it [03:16,  1.95it/s][A
+397it [03:17,  1.97it/s][A
+398it [03:17,  1.98it/s][A
+399it [03:18,  1.98it/s][A
+400it [03:18,  1.86it/s][Aindex: 400 loss: 8.528945
+
+401it [03:19,  1.89it/s][A
+402it [03:19,  1.91it/s][A
+403it [03:20,  1.95it/s][A
+404it [03:20,  1.96it/s][A
+405it [03:21,  1.97it/s][A
+406it [03:21,  1.99it/s][A
+407it [03:22,  2.01it/s][A
+408it [03:22,  2.00it/s][A
+409it [03:23,  2.00it/s][A
+410it [03:23,  1.95it/s][A
+411it [03:24,  1.94it/s][A
+412it [03:24,  1.98it/s][A
+413it [03:25,  1.98it/s][A
+414it [03:25,  1.98it/s][A
+415it [03:26,  1.99it/s][A
+416it [03:26,  2.02it/s][A
+417it [03:27,  2.01it/s][A
+418it [03:27,  2.00it/s][A
+419it [03:28,  2.01it/s][A
+420it [03:28,  1.90it/s][A
+421it [03:29,  1.92it/s][A
+422it [03:29,  1.94it/s][A
+423it [03:30,  1.96it/s][A
+424it [03:30,  1.98it/s][A
+425it [03:31,  2.00it/s][A
+426it [03:31,  2.00it/s][A
+427it [03:32,  2.01it/s][A
+428it [03:32,  2.01it/s][A
+429it [03:33,  2.03it/s][A
+430it [03:34,  1.92it/s][A
+431it [03:34,  1.93it/s][A
+432it [03:35,  1.94it/s][A
+433it [03:35,  1.95it/s][A
+434it [03:36,  1.98it/s][A
+435it [03:36,  1.98it/s][A
+436it [03:37,  1.99it/s][A
+437it [03:37,  2.00it/s][A
+438it [03:38,  2.03it/s][A
+439it [03:38,  2.02it/s][A
+440it [03:39,  2.02it/s][A
+441it [03:39,  2.04it/s][A
+442it [03:40,  1.96it/s][A
+443it [03:40,  1.97it/s][A
+444it [03:41,  1.97it/s][A
+445it [03:41,  1.98it/s][A
+446it [03:42,  1.99it/s][A
+447it [03:42,  2.01it/s][A
+448it [03:43,  2.01it/s][A
+449it [03:43,  2.00it/s][A
+450it [03:44,  2.00it/s][A
+451it [03:44,  2.03it/s][A
+452it [03:45,  2.01it/s][A
+453it [03:45,  2.00it/s][A
+454it [03:46,  1.99it/s][A
+455it [03:46,  1.93it/s][A
+456it [03:47,  1.97it/s][A
+457it [03:47,  1.98it/s][A
+458it [03:48,  1.99it/s][A
+459it [03:48,  2.00it/s][A
+460it [03:49,  2.03it/s][A
+461it [03:49,  2.06it/s][A
+462it [03:50,  2.05it/s][A
+463it [03:50,  2.04it/s][A
+464it [03:50,  2.07it/s][A
+465it [03:51,  2.09it/s][A
+466it [03:51,  2.09it/s][A
+467it [03:52,  2.09it/s][A
+468it [03:52,  2.09it/s][A
+469it [03:53,  2.10it/s][A
+470it [03:53,  2.02it/s][A
+471it [03:54,  2.06it/s][A
+472it [03:54,  2.08it/s][A
+473it [03:55,  2.08it/s][A
+474it [03:55,  2.11it/s][A
+475it [03:56,  2.09it/s][A
+476it [03:56,  2.09it/s][A
+477it [03:57,  2.09it/s][A
+478it [03:57,  2.08it/s][A
+479it [03:58,  2.10it/s][A
+480it [03:58,  2.09it/s][A
+481it [03:59,  2.09it/s][A
+482it [03:59,  1.98it/s][A
+483it [04:00,  2.03it/s][A
+484it [04:00,  2.02it/s][A
+485it [04:01,  2.04it/s][A
+486it [04:01,  2.05it/s][A
+487it [04:02,  2.07it/s][A
+488it [04:02,  2.09it/s][A
+489it [04:03,  2.09it/s][A
+490it [04:03,  2.09it/s][A
+491it [04:03,  2.07it/s][A
+492it [04:04,  2.10it/s][A
+493it [04:04,  2.10it/s][A
+494it [04:05,  2.08it/s][A
+495it [04:05,  2.08it/s][A
+496it [04:06,  2.04it/s][A
+497it [04:06,  2.06it/s][A
+498it [04:07,  2.02it/s][A
+499it [04:07,  2.03it/s][A
+500it [04:08,  2.03it/s][A
+501it [04:08,  2.05it/s][A
+502it [04:09,  2.05it/s][A
+503it [04:09,  1.93it/s][A
+504it [04:10,  1.95it/s][A
+505it [04:10,  1.98it/s][A
+506it [04:11,  1.99it/s][A
+507it [04:11,  2.01it/s][A
+508it [04:12,  2.02it/s][A
+509it [04:12,  1.95it/s][A
+510it [04:13,  2.01it/s][A
+511it [04:13,  2.01it/s][A
+512it [04:14,  2.02it/s][A
+513it [04:14,  2.05it/s][A
+514it [04:15,  2.07it/s][A
+515it [04:15,  2.06it/s][A
+516it [04:16,  2.05it/s][A
+517it [04:16,  2.05it/s][A
+518it [04:17,  2.05it/s][A
+519it [04:17,  2.08it/s][A
+520it [04:18,  2.07it/s][A
+521it [04:18,  2.07it/s][A
+522it [04:19,  2.07it/s][A
+523it [04:19,  2.07it/s][A
+524it [04:20,  2.08it/s][A
+525it [04:20,  2.06it/s][A
+526it [04:21,  2.05it/s][A
+527it [04:21,  2.06it/s][A
+528it [04:22,  2.08it/s][A
+529it [04:22,  2.07it/s][A
+530it [04:23,  2.06it/s][A
+531it [04:23,  2.06it/s][A
+532it [04:24,  2.03it/s][A
+533it [04:24,  2.04it/s][A
+534it [04:25,  2.04it/s][A
+535it [04:25,  1.96it/s][A
+536it [04:26,  1.96it/s][A
+537it [04:26,  1.99it/s][A
+538it [04:27,  2.00it/s][A
+539it [04:27,  2.00it/s][A
+540it [04:28,  2.00it/s][A
+541it [04:28,  2.02it/s][A
+542it [04:29,  2.03it/s][A
+543it [04:29,  2.01it/s][A
+544it [04:30,  2.00it/s][A
+545it [04:30,  2.00it/s][A
+546it [04:31,  2.01it/s][A
+547it [04:31,  1.99it/s][A
+548it [04:32,  1.98it/s][A
+549it [04:32,  1.98it/s][A
+550it [04:33,  2.01it/s][A
+551it [04:33,  2.03it/s][A
+552it [04:34,  2.05it/s][A
+553it [04:34,  2.03it/s][A
+554it [04:35,  2.02it/s][A
+555it [04:35,  2.04it/s][A
+556it [04:36,  2.02it/s][A
+557it [04:36,  2.00it/s][A
+558it [04:37,  1.97it/s][A
+559it [04:37,  2.00it/s][A
+560it [04:38,  1.99it/s][A
+561it [04:38,  2.00it/s][A
+562it [04:39,  2.00it/s][A
+563it [04:39,  2.02it/s][A
+564it [04:40,  2.03it/s][A
+565it [04:40,  1.91it/s][A
+566it [04:41,  1.92it/s][A
+567it [04:41,  1.95it/s][A
+568it [04:42,  1.97it/s][A
+569it [04:42,  2.00it/s][A
+570it [04:43,  2.00it/s][A
+571it [04:43,  2.00it/s][A
+572it [04:44,  2.00it/s][A
+573it [04:44,  2.02it/s][A
+574it [04:45,  2.02it/s][A
+575it [04:45,  2.02it/s][A
+576it [04:46,  2.01it/s][A
+577it [04:46,  2.02it/s][A
+578it [04:47,  2.03it/s][A
+579it [04:47,  2.02it/s][A
+580it [04:48,  2.01it/s][A
+581it [04:48,  2.01it/s][A
+582it [04:49,  2.01it/s][A
+583it [04:49,  1.98it/s][A
+584it [04:50,  2.00it/s][A
+585it [04:50,  2.01it/s][A
+586it [04:51,  2.02it/s][A
+587it [04:51,  2.02it/s][A
+588it [04:52,  2.04it/s][A
+589it [04:52,  2.05it/s][A
+590it [04:53,  2.05it/s][A
+591it [04:53,  2.07it/s][A
+592it [04:53,  2.07it/s][A
+593it [04:54,  2.07it/s][A
+594it [04:54,  2.07it/s][A
+595it [04:55,  2.08it/s][A
+596it [04:56,  1.93it/s][A
+597it [04:56,  1.96it/s][A
+598it [04:57,  1.98it/s][A
+599it [04:57,  2.01it/s][A
+600it [04:57,  2.04it/s][Aindex: 600 loss: 8.381415
+
+601it [04:58,  2.05it/s][A
+602it [04:58,  2.07it/s][A
+603it [04:59,  2.08it/s][A
+604it [04:59,  2.10it/s][A
+605it [05:00,  2.12it/s][A
+606it [05:00,  2.12it/s][A
+607it [05:01,  2.09it/s][A
+608it [05:01,  2.07it/s][A
+609it [05:02,  2.07it/s][A
+610it [05:02,  2.08it/s][A
+611it [05:03,  2.06it/s][A
+612it [05:03,  2.04it/s][A
+613it [05:04,  2.03it/s][A
+614it [05:04,  2.03it/s][A
+615it [05:05,  2.01it/s][A
+616it [05:05,  2.01it/s][A
+617it [05:06,  2.03it/s][A
+618it [05:06,  2.03it/s][A
+619it [05:07,  1.98it/s][A
+620it [05:07,  1.98it/s][A
+621it [05:08,  1.99it/s][A
+622it [05:08,  2.01it/s][A
+623it [05:09,  2.00it/s][A
+624it [05:09,  2.00it/s][A
+625it [05:10,  2.00it/s][A
+626it [05:10,  2.00it/s][A
+627it [05:11,  1.90it/s][A
+628it [05:11,  1.92it/s][A
+629it [05:12,  1.93it/s][A
+630it [05:12,  1.95it/s][A
+631it [05:13,  1.99it/s][A
+632it [05:13,  1.99it/s][A
+633it [05:14,  1.99it/s][A
+634it [05:14,  1.99it/s][A
+635it [05:15,  2.02it/s][A
+636it [05:15,  1.95it/s][A
+637it [05:16,  1.97it/s][A
+638it [05:16,  1.97it/s][A
+639it [05:17,  1.99it/s][A
+640it [05:17,  2.01it/s][A
+641it [05:18,  2.01it/s][A
+642it [05:18,  2.00it/s][A
+643it [05:19,  2.00it/s][A
+644it [05:19,  2.01it/s][A
+645it [05:20,  2.01it/s][A
+646it [05:20,  2.01it/s][A
+647it [05:21,  2.01it/s][A
+648it [05:21,  1.99it/s][A
+649it [05:22,  1.88it/s][A
+650it [05:22,  1.90it/s][A
+651it [05:23,  1.92it/s][A
+652it [05:23,  1.95it/s][A
+653it [05:24,  1.96it/s][A
+654it [05:24,  1.97it/s][A
+655it [05:25,  1.98it/s][A
+656it [05:25,  1.98it/s][A
+657it [05:26,  1.92it/s][A
+658it [05:27,  1.96it/s][A
+659it [05:27,  1.95it/s][A
+660it [05:28,  1.95it/s][A
+661it [05:28,  1.99it/s][A
+662it [05:29,  1.99it/s][A
+663it [05:29,  1.98it/s][A
+664it [05:30,  2.02it/s][A
+665it [05:30,  2.02it/s][A
+666it [05:30,  2.04it/s][A
+667it [05:31,  2.03it/s][A
+668it [05:31,  2.01it/s][A
+669it [05:32,  2.02it/s][A
+670it [05:32,  2.03it/s][A
+671it [05:33,  2.03it/s][A
+672it [05:33,  2.03it/s][A
+673it [05:34,  2.03it/s][A
+674it [05:34,  2.03it/s][A
+675it [05:35,  2.04it/s][A
+676it [05:35,  2.04it/s][A
+677it [05:36,  2.03it/s][A
+678it [05:36,  2.05it/s][A
+679it [05:37,  2.05it/s][A
+680it [05:37,  2.07it/s][A
+681it [05:38,  2.04it/s][A
+682it [05:38,  2.02it/s][A
+683it [05:39,  2.02it/s][A
+684it [05:39,  2.03it/s][A
+685it [05:40,  2.03it/s][A
+686it [05:40,  2.03it/s][A
+687it [05:41,  2.02it/s][A
+688it [05:41,  2.04it/s][A
+689it [05:42,  2.03it/s][A
+690it [05:42,  2.01it/s][A
+691it [05:43,  2.00it/s][A
+692it [05:43,  2.01it/s][A
+693it [05:44,  2.03it/s][A
+694it [05:44,  2.02it/s][A
+695it [05:45,  2.01it/s][A
+696it [05:45,  2.01it/s][A
+697it [05:46,  2.02it/s][A
+698it [05:46,  1.96it/s][A
+699it [05:47,  1.95it/s][A
+700it [05:47,  1.97it/s][A
+701it [05:48,  1.98it/s][A
+702it [05:48,  1.98it/s][A
+703it [05:49,  1.99it/s][A
+704it [05:49,  2.00it/s][A
+705it [05:50,  2.00it/s][A
+706it [05:50,  2.02it/s][A
+707it [05:51,  2.02it/s][A
+708it [05:51,  2.01it/s][A
+709it [05:52,  2.04it/s][A
+710it [05:52,  2.03it/s][A
+711it [05:53,  2.06it/s][A
+712it [05:53,  2.06it/s][A
+713it [05:54,  2.06it/s][A
+714it [05:54,  2.07it/s][A
+715it [05:55,  2.08it/s][A
+716it [05:55,  2.07it/s][A
+717it [05:56,  2.06it/s][A
+718it [05:56,  2.05it/s][A
+719it [05:57,  2.07it/s][A
+720it [05:57,  2.07it/s][A
+721it [05:58,  2.09it/s][A
+722it [05:58,  2.08it/s][A
+723it [05:59,  2.07it/s][A
+724it [05:59,  2.08it/s][A
+725it [06:00,  2.07it/s][A
+726it [06:00,  2.07it/s][A
+727it [06:00,  2.06it/s][A
+728it [06:01,  2.06it/s][A
+729it [06:01,  2.05it/s][A
+730it [06:02,  1.88it/s][A
+731it [06:03,  1.90it/s][A
+732it [06:03,  1.93it/s][A
+733it [06:04,  1.98it/s][A
+734it [06:04,  1.96it/s][A
+735it [06:05,  2.00it/s][A
+736it [06:05,  2.01it/s][A
+737it [06:06,  2.03it/s][A
+738it [06:06,  2.06it/s][A
+739it [06:07,  2.05it/s][A
+740it [06:07,  1.96it/s][A
+741it [06:08,  1.98it/s][A
+742it [06:08,  2.03it/s][A
+743it [06:09,  2.04it/s][A
+744it [06:09,  2.05it/s][A
+745it [06:09,  2.07it/s][A
+746it [06:10,  2.08it/s][A
+747it [06:10,  2.11it/s][A
+748it [06:11,  2.09it/s][A
+749it [06:11,  2.09it/s][A
+750it [06:12,  2.08it/s][A
+751it [06:12,  2.02it/s][A
+752it [06:13,  2.01it/s][A
+753it [06:13,  2.03it/s][A
+754it [06:14,  2.05it/s][A
+755it [06:14,  2.05it/s][A
+756it [06:15,  2.08it/s][A
+757it [06:15,  2.09it/s][A
+758it [06:16,  2.09it/s][A
+759it [06:16,  2.08it/s][A
+760it [06:17,  2.11it/s][A
+761it [06:17,  2.10it/s][A
+762it [06:18,  2.11it/s][A
+763it [06:18,  2.10it/s][A
+764it [06:19,  2.09it/s][A
+765it [06:19,  2.10it/s][A
+766it [06:20,  2.09it/s][A
+767it [06:20,  2.07it/s][A
+768it [06:21,  2.07it/s][A
+769it [06:21,  2.05it/s][A
+770it [06:22,  2.05it/s][A
+771it [06:22,  2.04it/s][A
+772it [06:23,  1.96it/s][A
+773it [06:23,  1.98it/s][A
+774it [06:24,  1.96it/s][A
+775it [06:24,  2.00it/s][A
+776it [06:25,  2.01it/s][A
+777it [06:25,  2.00it/s][A
+778it [06:26,  2.04it/s][A
+779it [06:26,  2.06it/s][A
+780it [06:27,  2.05it/s][A
+781it [06:27,  2.04it/s][A
+782it [06:27,  2.04it/s][A
+783it [06:28,  2.06it/s][A
+784it [06:28,  2.02it/s][A
+785it [06:29,  2.01it/s][A
+786it [06:29,  2.01it/s][A
+787it [06:30,  2.02it/s][A
+788it [06:30,  2.01it/s][A
+789it [06:31,  2.01it/s][A
+790it [06:31,  2.01it/s][A
+791it [06:32,  2.02it/s][A
+792it [06:32,  2.04it/s][A
+793it [06:33,  2.02it/s][A
+794it [06:33,  2.01it/s][A
+795it [06:34,  1.99it/s][A
+796it [06:34,  2.01it/s][A
+797it [06:35,  1.98it/s][A
+798it [06:35,  1.98it/s][A
+799it [06:36,  1.97it/s][A
+800it [06:36,  1.99it/s][Aindex: 800 loss: 8.195645
+
+801it [06:37,  2.01it/s][A
+802it [06:37,  2.01it/s][A
+803it [06:38,  1.97it/s][A
+804it [06:39,  1.97it/s][A
+805it [06:39,  1.98it/s][A
+806it [06:40,  1.98it/s][A
+807it [06:40,  1.98it/s][A
+808it [06:41,  1.99it/s][A
+809it [06:41,  1.99it/s][A
+810it [06:42,  2.01it/s][A
+811it [06:42,  2.01it/s][A
+812it [06:43,  2.00it/s][A
+813it [06:43,  1.89it/s][A
+814it [06:44,  1.93it/s][A
+815it [06:44,  1.93it/s][A
+816it [06:45,  1.95it/s][A
+817it [06:45,  1.97it/s][A
+818it [06:46,  1.97it/s][A
+819it [06:46,  1.98it/s][A
+820it [06:47,  2.00it/s][A
+821it [06:47,  2.00it/s][A
+822it [06:48,  2.01it/s][A
+823it [06:48,  2.03it/s][A
+824it [06:49,  2.01it/s][A
+825it [06:49,  1.99it/s][A
+826it [06:50,  1.99it/s][A
+827it [06:50,  2.01it/s][A
+828it [06:51,  2.02it/s][A
+829it [06:51,  2.02it/s][A
+830it [06:52,  2.03it/s][A
+831it [06:52,  2.02it/s][A
+832it [06:53,  2.05it/s][A
+833it [06:53,  2.04it/s][A
+834it [06:53,  2.06it/s][A
+835it [06:54,  2.05it/s][A
+836it [06:54,  2.07it/s][A
+837it [06:55,  2.06it/s][A
+838it [06:55,  2.07it/s][A
+839it [06:56,  2.07it/s][A
+840it [06:56,  2.06it/s][A
+841it [06:57,  2.06it/s][A
+842it [06:57,  2.06it/s][A
+843it [06:58,  2.07it/s][A
+844it [06:58,  1.98it/s][A
+845it [06:59,  1.99it/s][A
+846it [06:59,  2.02it/s][A
+847it [07:00,  2.03it/s][A
+848it [07:00,  2.05it/s][A
+849it [07:01,  2.05it/s][A
+850it [07:01,  2.08it/s][A
+851it [07:02,  2.07it/s][A
+852it [07:02,  2.07it/s][A
+853it [07:03,  2.07it/s][A
+854it [07:03,  2.09it/s][A
+855it [07:04,  2.08it/s][A
+856it [07:04,  2.07it/s][A
+857it [07:05,  2.06it/s][A
+858it [07:05,  2.06it/s][A
+859it [07:06,  2.04it/s][A
+860it [07:06,  2.04it/s][A
+861it [07:07,  2.02it/s][A
+862it [07:07,  2.03it/s][A
+863it [07:08,  2.04it/s][A
+864it [07:08,  2.03it/s][A
+865it [07:09,  1.91it/s][A
+866it [07:09,  1.93it/s][A
+867it [07:10,  1.95it/s][A
+868it [07:10,  1.98it/s][A
+869it [07:11,  1.93it/s][A
+870it [07:11,  1.95it/s][A
+871it [07:12,  1.98it/s][A
+872it [07:12,  1.98it/s][A
+873it [07:13,  1.99it/s][A
+874it [07:13,  1.99it/s][A
+875it [07:14,  1.83it/s][A
+876it [07:14,  1.90it/s][A
+877it [07:15,  1.93it/s][A
+878it [07:15,  1.96it/s][A
+879it [07:16,  1.97it/s][A
+880it [07:16,  1.99it/s][A
+881it [07:17,  2.01it/s][A
+882it [07:17,  2.00it/s][A
+883it [07:18,  2.01it/s][A
+884it [07:18,  2.02it/s][A
+885it [07:19,  2.01it/s][A
+886it [07:19,  1.99it/s][A
+887it [07:20,  1.97it/s][A
+888it [07:20,  1.95it/s][A
+889it [07:21,  1.98it/s][A
+890it [07:21,  2.00it/s][A
+891it [07:22,  1.99it/s][A
+892it [07:22,  1.96it/s][A
+893it [07:23,  1.99it/s][A
+894it [07:23,  1.99it/s][A
+895it [07:24,  1.86it/s][A
+896it [07:25,  1.89it/s][A
+897it [07:25,  1.91it/s][A
+898it [07:26,  1.96it/s][A
+899it [07:26,  1.97it/s][A
+900it [07:27,  1.99it/s][A
+901it [07:27,  2.00it/s][A
+902it [07:28,  2.01it/s][A
+903it [07:28,  2.02it/s][A
+904it [07:28,  2.03it/s][A
+905it [07:29,  1.88it/s][A
+906it [07:30,  1.93it/s][A
+907it [07:30,  1.96it/s][A
+908it [07:31,  1.95it/s][A
+909it [07:31,  1.96it/s][A
+910it [07:32,  1.98it/s][A
+911it [07:32,  2.01it/s][A
+912it [07:33,  2.02it/s][A
+913it [07:33,  2.03it/s][A
+914it [07:34,  2.02it/s][A
+915it [07:34,  2.02it/s][A
+916it [07:35,  2.04it/s][A
+917it [07:35,  2.04it/s][A
+918it [07:36,  2.02it/s][A
+919it [07:36,  2.03it/s][A
+920it [07:36,  2.04it/s][A
+921it [07:37,  2.04it/s][A
+922it [07:37,  2.05it/s][A
+923it [07:38,  2.04it/s][A
+924it [07:38,  2.04it/s][A
+925it [07:39,  2.04it/s][A
+926it [07:39,  2.04it/s][A
+927it [07:40,  2.03it/s][A
+928it [07:40,  2.03it/s][A
+929it [07:41,  2.00it/s][A
+930it [07:41,  2.00it/s][A
+931it [07:42,  2.00it/s][A
+932it [07:42,  2.00it/s][A
+933it [07:43,  2.00it/s][A
+934it [07:43,  2.02it/s][A
+935it [07:44,  2.01it/s][A
+936it [07:45,  1.91it/s][A
+937it [07:45,  1.92it/s][A
+938it [07:46,  1.89it/s][A938it [07:46,  2.01it/s]
+epoch: 0 validateAccuracy: 0.0012 trainAccuracy: 0.0003 delta: 0.0012
+Training:   0%|          | 1/1600 [08:42<231:52:52, 522.06s/it]
+0it [00:00, ?it/s][Aindex: 0 loss: 7.805615
+
+1it [00:20, 20.22s/it][A
+2it [00:20,  8.58s/it][A
+3it [00:21,  4.87s/it][A
+4it [00:21,  3.12s/it][A
+5it [00:21,  2.16s/it][A
+6it [00:22,  1.58s/it][A
+7it [00:22,  1.21s/it][A
+8it [00:23,  1.03it/s][A
+9it [00:23,  1.24it/s][A
+10it [00:24,  1.40it/s][A
+11it [00:24,  1.47it/s][A
+12it [00:25,  1.62it/s][A
+13it [00:25,  1.75it/s][A
+14it [00:26,  1.85it/s][A
+15it [00:26,  1.87it/s][A
+16it [00:27,  1.93it/s][A
+17it [00:27,  2.00it/s][A
+18it [00:28,  2.07it/s][A
+19it [00:28,  2.10it/s][A
+20it [00:29,  2.12it/s][A
+21it [00:29,  2.13it/s][A
+22it [00:30,  2.13it/s][A
+23it [00:30,  2.13it/s][A
+24it [00:31,  2.14it/s][A
+25it [00:31,  2.13it/s][A
+26it [00:31,  2.13it/s][A
+27it [00:32,  2.15it/s][A
+28it [00:32,  2.11it/s][A
+29it [00:33,  2.10it/s][A
+30it [00:33,  2.09it/s][A
+31it [00:34,  2.08it/s][A
+32it [00:34,  2.07it/s][A
+33it [00:35,  2.06it/s][A
+34it [00:35,  2.07it/s][A
+35it [00:36,  2.05it/s][A
+36it [00:36,  2.06it/s][A
+37it [00:37,  2.07it/s][A
+38it [00:37,  2.07it/s][A
+39it [00:38,  2.07it/s][A
+40it [00:38,  2.09it/s][A
+41it [00:39,  2.09it/s][A
+42it [00:39,  2.07it/s][A
+43it [00:40,  2.00it/s][A
+44it [00:40,  2.00it/s][A
+45it [00:41,  2.01it/s][A
+46it [00:41,  2.01it/s][A
+47it [00:42,  2.01it/s][A
+48it [00:42,  2.03it/s][A
+49it [00:43,  2.04it/s][A
+50it [00:43,  2.06it/s][A
+51it [00:44,  2.06it/s][A
+52it [00:44,  2.07it/s][A
+53it [00:45,  2.03it/s][A
+54it [00:45,  2.03it/s][A
+55it [00:46,  2.03it/s][A
+56it [00:46,  2.03it/s][A
+57it [00:47,  2.03it/s][A
+58it [00:47,  2.06it/s][A
+59it [00:48,  2.08it/s][A
+60it [00:48,  2.07it/s][A
+61it [00:49,  2.06it/s][A
+62it [00:49,  2.01it/s][A
+63it [00:50,  2.02it/s][A
+64it [00:50,  2.03it/s][A
+65it [00:51,  2.01it/s][A
+66it [00:51,  2.03it/s][A
+67it [00:51,  2.04it/s][A
+68it [00:52,  2.04it/s][A
+69it [00:52,  2.05it/s][A
+70it [00:53,  2.05it/s][A
+71it [00:53,  2.06it/s][A
+72it [00:54,  2.08it/s][A
+73it [00:54,  2.07it/s][A
+74it [00:55,  2.08it/s][A
+75it [00:55,  2.08it/s][A
+76it [00:56,  2.07it/s][A
+77it [00:56,  2.06it/s][A
+78it [00:57,  2.07it/s][A
+79it [00:57,  2.06it/s][A
+80it [00:58,  2.08it/s][A
+81it [00:58,  2.06it/s][A
+82it [00:59,  2.08it/s][A
+83it [00:59,  2.01it/s][A
+84it [01:00,  2.03it/s][A
+85it [01:00,  1.99it/s][A
+86it [01:01,  2.00it/s][A
+87it [01:01,  2.00it/s][A
+88it [01:02,  1.99it/s][A
+89it [01:02,  1.99it/s][A
+90it [01:03,  2.00it/s][A
+91it [01:03,  2.01it/s][A
+92it [01:04,  2.01it/s][A
+93it [01:04,  2.02it/s][A
+94it [01:05,  2.02it/s][A
+95it [01:05,  1.89it/s][A
+96it [01:06,  1.92it/s][A
+97it [01:06,  1.93it/s][A
+98it [01:07,  1.94it/s][A
+99it [01:07,  1.98it/s][A
+100it [01:08,  2.00it/s][A
+101it [01:08,  2.00it/s][A
+102it [01:09,  2.02it/s][A
+103it [01:09,  2.03it/s][A
+104it [01:10,  2.04it/s][A
+105it [01:10,  1.95it/s][A
+106it [01:11,  1.97it/s][A
+107it [01:11,  2.00it/s][A
+108it [01:12,  2.05it/s][A
+109it [01:12,  2.06it/s][A
+110it [01:13,  2.07it/s][A
+111it [01:13,  2.06it/s][A
+112it [01:14,  2.05it/s][A
+113it [01:14,  2.06it/s][A
+114it [01:15,  2.08it/s][A
+115it [01:15,  2.08it/s][A
+116it [01:16,  2.08it/s][A
+117it [01:16,  2.08it/s][A
+118it [01:17,  2.09it/s][A
+119it [01:17,  2.09it/s][A
+120it [01:18,  2.07it/s][A
+121it [01:18,  2.08it/s][A
+122it [01:19,  2.08it/s][A
+123it [01:19,  2.08it/s][A
+124it [01:20,  2.07it/s][A
+125it [01:20,  2.08it/s][A
+126it [01:20,  2.07it/s][A
+127it [01:21,  2.11it/s][A
+128it [01:21,  2.10it/s][A
+129it [01:22,  2.09it/s][A
+130it [01:22,  2.11it/s][A
+131it [01:23,  2.11it/s][A
+132it [01:23,  2.13it/s][A
+133it [01:24,  2.12it/s][A
+134it [01:24,  2.15it/s][A
+135it [01:25,  2.14it/s][A
+136it [01:25,  2.13it/s][A
+137it [01:26,  1.97it/s][A
+138it [01:26,  2.01it/s][A
+139it [01:27,  2.02it/s][A
+140it [01:27,  2.02it/s][A
+141it [01:28,  2.08it/s][A
+142it [01:28,  2.10it/s][A
+143it [01:29,  2.11it/s][A
+144it [01:29,  2.11it/s][A
+145it [01:30,  2.13it/s][A
+146it [01:30,  2.17it/s][A
+147it [01:30,  2.14it/s][A
+148it [01:31,  2.02it/s][A
+149it [01:31,  2.03it/s][A
+150it [01:32,  2.08it/s][A
+151it [01:32,  2.11it/s][A
+152it [01:33,  2.10it/s][A
+153it [01:33,  2.12it/s][A
+154it [01:34,  2.13it/s][A
+155it [01:34,  2.09it/s][A
+156it [01:35,  2.11it/s][A
+157it [01:35,  2.12it/s][A
+158it [01:36,  2.13it/s][A
+159it [01:36,  2.12it/s][A
+160it [01:37,  2.05it/s][A
+161it [01:37,  2.07it/s][A
+162it [01:38,  2.06it/s][A
+163it [01:38,  2.06it/s][A
+164it [01:39,  2.07it/s][A
+165it [01:39,  2.08it/s][A
+166it [01:40,  2.10it/s][A
+167it [01:40,  2.11it/s][A
+168it [01:41,  2.12it/s][A
+169it [01:41,  1.93it/s][A
+170it [01:42,  1.97it/s][A
+171it [01:42,  2.00it/s][A
+172it [01:43,  2.04it/s][A
+173it [01:43,  2.05it/s][A
+174it [01:44,  2.07it/s][A
+175it [01:44,  2.11it/s][A
+176it [01:44,  2.12it/s][A
+177it [01:45,  2.13it/s][A
+178it [01:45,  2.10it/s][A
+179it [01:46,  2.09it/s][A
+180it [01:46,  2.07it/s][A
+181it [01:47,  2.07it/s][A
+182it [01:47,  2.05it/s][A
+183it [01:48,  2.07it/s][A
+184it [01:48,  2.07it/s][A
+185it [01:49,  2.05it/s][A
+186it [01:49,  2.05it/s][A
+187it [01:50,  2.06it/s][A
+188it [01:50,  2.06it/s][A
+189it [01:51,  2.05it/s][A
+190it [01:51,  1.90it/s][A
+191it [01:52,  1.96it/s][A
+192it [01:52,  1.99it/s][A
+193it [01:53,  2.00it/s][A
+194it [01:53,  2.01it/s][A
+195it [01:54,  2.03it/s][A
+196it [01:54,  2.05it/s][A
+197it [01:55,  2.06it/s][A
+198it [01:55,  2.05it/s][A
+199it [01:56,  2.05it/s][A
+200it [01:56,  2.04it/s][Aindex: 200 loss: 7.6273713
+
+201it [01:57,  2.03it/s][A
+202it [01:57,  1.94it/s][A
+203it [01:58,  1.99it/s][A
+204it [01:58,  2.02it/s][A
+205it [01:59,  2.03it/s][A
+206it [01:59,  2.04it/s][A
+207it [02:00,  2.04it/s][A
+208it [02:00,  2.05it/s][A
+209it [02:01,  2.04it/s][A
+210it [02:01,  2.04it/s][A
+211it [02:02,  1.95it/s][A
+212it [02:02,  1.97it/s][A
+213it [02:03,  2.00it/s][A
+214it [02:03,  2.04it/s][A
+215it [02:04,  2.05it/s][A
+216it [02:04,  2.05it/s][A
+217it [02:05,  2.05it/s][A
+218it [02:05,  2.08it/s][A
+219it [02:06,  2.06it/s][A
+220it [02:06,  2.05it/s][A
+221it [02:07,  1.91it/s][A
+222it [02:07,  1.95it/s][A
+223it [02:08,  1.98it/s][A
+224it [02:08,  1.99it/s][A
+225it [02:09,  2.00it/s][A
+226it [02:09,  2.02it/s][A
+227it [02:10,  2.04it/s][A
+228it [02:10,  2.05it/s][A
+229it [02:11,  2.01it/s][A
+230it [02:11,  2.04it/s][A
+231it [02:12,  2.05it/s][A
+232it [02:12,  2.11it/s][A
+233it [02:13,  2.09it/s][A
+234it [02:13,  2.11it/s][A
+235it [02:13,  2.14it/s][A
+236it [02:14,  2.13it/s][A
+237it [02:14,  2.13it/s][A
+238it [02:15,  2.12it/s][A
+239it [02:15,  2.12it/s][A
+240it [02:16,  2.06it/s][A
+241it [02:16,  1.96it/s][A
+242it [02:17,  1.86it/s][A
+243it [02:18,  1.91it/s][A
+244it [02:18,  1.96it/s][A
+245it [02:18,  2.00it/s][A
+246it [02:19,  2.04it/s][A
+247it [02:19,  2.07it/s][A
+248it [02:20,  2.09it/s][A
+249it [02:20,  2.10it/s][A
+250it [02:21,  2.15it/s][A
+251it [02:21,  2.15it/s][A
+252it [02:22,  2.15it/s][A
+253it [02:22,  2.14it/s][A
+254it [02:23,  2.15it/s][A
+255it [02:23,  2.15it/s][A
+256it [02:24,  2.13it/s][A
+257it [02:24,  2.04it/s][A
+258it [02:25,  2.04it/s][A
+259it [02:25,  2.03it/s][A
+260it [02:26,  2.06it/s][A
+261it [02:26,  2.05it/s][A
+262it [02:27,  2.05it/s][A
+263it [02:27,  1.90it/s][A
+264it [02:28,  1.92it/s][A
+265it [02:28,  1.96it/s][A
+266it [02:29,  1.98it/s][A
+267it [02:29,  2.00it/s][A
+268it [02:30,  2.04it/s][A
+269it [02:30,  2.04it/s][A
+270it [02:31,  2.04it/s][A
+271it [02:31,  2.07it/s][A
+272it [02:32,  2.06it/s][A
+273it [02:32,  2.05it/s][A
+274it [02:33,  2.01it/s][A
+275it [02:33,  2.02it/s][A
+276it [02:34,  2.02it/s][A
+277it [02:34,  2.02it/s][A
+278it [02:35,  2.05it/s][A
+279it [02:35,  2.04it/s][A
+280it [02:36,  2.04it/s][A
+281it [02:36,  2.05it/s][A
+282it [02:36,  2.07it/s][A
+283it [02:37,  2.07it/s][A
+284it [02:38,  1.97it/s][A
+285it [02:38,  1.94it/s][A
+286it [02:39,  1.97it/s][A
+287it [02:39,  1.99it/s][A
+288it [02:40,  1.99it/s][A
+289it [02:40,  2.01it/s][A
+290it [02:40,  2.02it/s][A
+291it [02:41,  2.03it/s][A
+292it [02:41,  2.04it/s][A
+293it [02:42,  2.06it/s][A
+294it [02:43,  1.91it/s][A
+295it [02:43,  1.97it/s][A
+296it [02:44,  1.99it/s][A
+297it [02:44,  1.99it/s][A
+298it [02:45,  2.00it/s][A
+299it [02:45,  2.04it/s][A
+300it [02:45,  2.04it/s][A
+301it [02:46,  2.04it/s][A
+302it [02:46,  2.04it/s][A
+303it [02:47,  2.04it/s][A
+304it [02:47,  2.03it/s][A
+305it [02:48,  2.03it/s][A
+306it [02:48,  2.03it/s][A
+307it [02:49,  2.03it/s][A
+308it [02:49,  2.04it/s][A
+309it [02:50,  2.05it/s][A
+310it [02:50,  2.03it/s][A
+311it [02:51,  2.04it/s][A
+312it [02:51,  2.05it/s][A
+313it [02:52,  2.05it/s][A
+314it [02:52,  2.04it/s][A
+315it [02:53,  2.00it/s][A
+316it [02:53,  2.02it/s][A
+317it [02:54,  2.00it/s][A
+318it [02:54,  2.04it/s][A
+319it [02:55,  2.03it/s][A
+320it [02:55,  2.02it/s][A
+321it [02:56,  1.98it/s][A
+322it [02:56,  2.03it/s][A
+323it [02:57,  2.04it/s][A
+324it [02:57,  2.03it/s][A
+325it [02:58,  2.05it/s][A
+326it [02:58,  2.04it/s][A
+327it [02:59,  2.06it/s][A
+328it [02:59,  2.07it/s][A
+329it [03:00,  2.06it/s][A
+330it [03:00,  2.06it/s][A
+331it [03:01,  2.08it/s][A
+332it [03:01,  2.09it/s][A
+333it [03:02,  2.08it/s][A
+334it [03:02,  2.08it/s][A
+335it [03:03,  2.07it/s][A
+336it [03:03,  2.03it/s][A
+337it [03:04,  2.05it/s][A
+338it [03:04,  2.03it/s][A
+339it [03:05,  2.05it/s][A
+340it [03:05,  2.07it/s][A
+341it [03:06,  2.08it/s][A
+342it [03:06,  2.01it/s][A
+343it [03:07,  2.02it/s][A
+344it [03:07,  1.98it/s][A
+345it [03:08,  1.99it/s][A
+346it [03:08,  1.86it/s][A
+347it [03:09,  1.91it/s][A
+348it [03:09,  1.96it/s][A
+349it [03:10,  1.99it/s][A
+350it [03:10,  2.01it/s][A
+351it [03:11,  2.04it/s][A
+352it [03:11,  2.05it/s][A
+353it [03:12,  2.05it/s][A
+354it [03:12,  2.08it/s][A
+355it [03:12,  2.11it/s][A
+356it [03:13,  2.12it/s][A
+357it [03:13,  2.11it/s][A
+358it [03:14,  2.15it/s][A
+359it [03:14,  2.13it/s][A
+360it [03:15,  2.11it/s][A
+361it [03:15,  2.11it/s][A
+362it [03:16,  2.12it/s][A
+363it [03:16,  2.13it/s][A
+364it [03:17,  2.13it/s][A
+365it [03:17,  2.13it/s][A
+366it [03:18,  2.12it/s][A
+367it [03:18,  2.10it/s][A
+368it [03:19,  2.04it/s][A
+369it [03:19,  2.00it/s][A
+370it [03:20,  2.01it/s][A
+371it [03:20,  2.06it/s][A
+372it [03:21,  2.03it/s][A
+373it [03:21,  2.06it/s][A
+374it [03:22,  2.09it/s][A
+375it [03:22,  2.09it/s][A
+376it [03:23,  2.12it/s][A
+377it [03:23,  2.14it/s][A
+378it [03:24,  2.00it/s][A
+379it [03:24,  2.03it/s][A
+380it [03:25,  2.05it/s][A
+381it [03:25,  2.09it/s][A
+382it [03:25,  2.09it/s][A
+383it [03:26,  2.06it/s][A
+384it [03:26,  2.07it/s][A
+385it [03:27,  2.09it/s][A
+386it [03:27,  2.11it/s][A
+387it [03:28,  2.12it/s][A
+388it [03:28,  2.12it/s][A
+389it [03:29,  2.12it/s][A
+390it [03:29,  2.08it/s][A
+391it [03:30,  2.10it/s][A
+392it [03:30,  2.09it/s][A
+393it [03:31,  2.09it/s][A
+394it [03:31,  2.08it/s][A
+395it [03:32,  2.10it/s][A
+396it [03:32,  2.09it/s][A
+397it [03:33,  2.09it/s][A
+398it [03:33,  2.12it/s][A
+399it [03:34,  2.07it/s][A
+400it [03:34,  2.09it/s][Aindex: 400 loss: 7.2185326
+
+401it [03:35,  2.10it/s][A
+402it [03:35,  2.11it/s][A
+403it [03:35,  2.12it/s][A
+404it [03:36,  2.06it/s][A
+405it [03:36,  2.11it/s][A
+406it [03:37,  2.11it/s][A
+407it [03:37,  2.12it/s][A
+408it [03:38,  2.12it/s][A
+409it [03:38,  2.12it/s][A
+410it [03:39,  1.98it/s][A
+411it [03:39,  2.01it/s][A
+412it [03:40,  2.04it/s][A
+413it [03:40,  2.05it/s][A
+414it [03:41,  2.07it/s][A
+415it [03:41,  1.97it/s][A
+416it [03:42,  2.01it/s][A
+417it [03:42,  2.05it/s][A
+418it [03:43,  2.07it/s][A
+419it [03:43,  2.08it/s][A
+420it [03:44,  2.12it/s][A
+421it [03:44,  2.13it/s][A
+422it [03:45,  2.15it/s][A
+423it [03:45,  2.15it/s][A
+424it [03:46,  2.15it/s][A
+425it [03:46,  2.14it/s][A
+426it [03:46,  2.14it/s][A
+427it [03:47,  2.14it/s][A
+428it [03:47,  2.14it/s][A
+429it [03:48,  2.12it/s][A
+430it [03:48,  2.10it/s][A
+431it [03:49,  2.07it/s][A
+432it [03:49,  2.07it/s][A
+433it [03:50,  2.04it/s][A
+434it [03:50,  2.02it/s][A
+435it [03:51,  2.02it/s][A
+436it [03:51,  2.04it/s][A
+437it [03:52,  2.07it/s][A
+438it [03:52,  2.07it/s][A
+439it [03:53,  2.07it/s][A
+440it [03:53,  2.07it/s][A
+441it [03:54,  2.07it/s][A
+442it [03:54,  2.00it/s][A
+443it [03:55,  2.03it/s][A
+444it [03:55,  2.03it/s][A
+445it [03:56,  2.03it/s][A
+446it [03:56,  2.06it/s][A
+447it [03:57,  2.06it/s][A
+448it [03:57,  2.06it/s][A
+449it [03:58,  2.04it/s][A
+450it [03:58,  2.05it/s][A
+451it [03:59,  2.06it/s][A
+452it [03:59,  1.98it/s][A
+453it [04:00,  1.98it/s][A
+454it [04:00,  2.00it/s][A
+455it [04:01,  2.00it/s][A
+456it [04:01,  2.00it/s][A
+457it [04:02,  2.02it/s][A
+458it [04:02,  2.04it/s][A
+459it [04:03,  2.05it/s][A
+460it [04:03,  2.06it/s][A
+461it [04:04,  2.06it/s][A
+462it [04:04,  2.07it/s][A
+463it [04:05,  2.05it/s][A
+464it [04:05,  2.08it/s][A
+465it [04:06,  2.07it/s][A
+466it [04:06,  2.07it/s][A
+467it [04:06,  2.08it/s][A
+468it [04:07,  2.01it/s][A
+469it [04:08,  2.03it/s][A
+470it [04:08,  2.05it/s][A
+471it [04:08,  2.05it/s][A
+472it [04:09,  2.07it/s][A
+473it [04:09,  2.03it/s][A
+474it [04:10,  2.03it/s][A
+475it [04:10,  2.04it/s][A
+476it [04:11,  2.04it/s][A
+477it [04:11,  2.05it/s][A
+478it [04:12,  2.09it/s][A
+479it [04:12,  2.08it/s][A
+480it [04:13,  2.07it/s][A
+481it [04:13,  2.08it/s][A
+482it [04:14,  2.12it/s][A
+483it [04:14,  2.14it/s][A
+484it [04:15,  2.06it/s][A
+485it [04:15,  2.11it/s][A
+486it [04:16,  2.09it/s][A
+487it [04:16,  2.12it/s][A
+488it [04:17,  2.13it/s][A
+489it [04:17,  2.14it/s][A
+490it [04:18,  2.14it/s][A
+491it [04:18,  2.15it/s][A
+492it [04:18,  2.17it/s][A
+493it [04:19,  2.15it/s][A
+494it [04:19,  2.15it/s][A
+495it [04:20,  2.13it/s][A
+496it [04:20,  2.13it/s][A
+497it [04:21,  2.14it/s][A
+498it [04:21,  2.13it/s][A
+499it [04:22,  2.12it/s][A
+500it [04:22,  2.12it/s][A
+501it [04:23,  2.13it/s][A
+502it [04:23,  2.15it/s][A
+503it [04:24,  2.14it/s][A
+504it [04:24,  2.13it/s][A
+505it [04:25,  2.12it/s][A
+506it [04:25,  2.14it/s][A
+507it [04:26,  2.10it/s][A
+508it [04:26,  2.10it/s][A
+509it [04:26,  2.09it/s][A
+510it [04:27,  2.08it/s][A
+511it [04:27,  2.10it/s][A
+512it [04:28,  2.08it/s][A
+513it [04:28,  2.08it/s][A
+514it [04:29,  2.08it/s][A
+515it [04:29,  2.10it/s][A
+516it [04:30,  2.08it/s][A
+517it [04:30,  2.08it/s][A
+518it [04:31,  2.06it/s][A
+519it [04:31,  2.06it/s][A
+520it [04:32,  2.07it/s][A
+521it [04:32,  2.06it/s][A
+522it [04:33,  2.06it/s][A
+523it [04:33,  2.05it/s][A
+524it [04:34,  2.04it/s][A
+525it [04:34,  2.07it/s][A
+526it [04:35,  2.08it/s][A
+527it [04:35,  2.00it/s][A
+528it [04:36,  2.05it/s][A
+529it [04:36,  2.07it/s][A
+530it [04:37,  2.06it/s][A
+531it [04:37,  2.06it/s][A
+532it [04:38,  2.06it/s][A
+533it [04:38,  2.06it/s][A
+534it [04:39,  2.07it/s][A
+535it [04:39,  2.05it/s][A
+536it [04:40,  2.03it/s][A
+537it [04:40,  2.04it/s][A
+538it [04:41,  2.03it/s][A
+539it [04:41,  2.00it/s][A
+540it [04:42,  2.01it/s][A
+541it [04:42,  2.03it/s][A
+542it [04:43,  2.05it/s][A
+543it [04:43,  2.05it/s][A
+544it [04:44,  2.04it/s][A
+545it [04:44,  2.05it/s][A
+546it [04:44,  2.05it/s][A
+547it [04:45,  2.06it/s][A
+548it [04:46,  1.97it/s][A
+549it [04:46,  1.99it/s][A
+550it [04:47,  2.00it/s][A
+551it [04:47,  2.01it/s][A
+552it [04:47,  2.04it/s][A
+553it [04:48,  2.05it/s][A
+554it [04:48,  2.06it/s][A
+555it [04:49,  2.05it/s][A
+556it [04:49,  2.05it/s][A
+557it [04:50,  2.04it/s][A
+558it [04:50,  1.94it/s][A
+559it [04:51,  1.95it/s][A
+560it [04:51,  1.97it/s][A
+561it [04:52,  1.99it/s][A
+562it [04:52,  2.01it/s][A
+563it [04:53,  2.02it/s][A
+564it [04:53,  2.02it/s][A
+565it [04:54,  2.03it/s][A
+566it [04:54,  2.02it/s][A
+567it [04:55,  2.04it/s][A
+568it [04:55,  2.03it/s][A
+569it [04:56,  2.03it/s][A
+570it [04:56,  2.02it/s][A
+571it [04:57,  2.06it/s][A
+572it [04:57,  2.06it/s][A
+573it [04:58,  2.08it/s][A
+574it [04:58,  2.06it/s][A
+575it [04:59,  2.06it/s][A
+576it [04:59,  2.00it/s][A
+577it [05:00,  2.01it/s][A
+578it [05:00,  2.03it/s][A
+579it [05:01,  2.02it/s][A
+580it [05:01,  2.03it/s][A
+581it [05:02,  1.98it/s][A
+582it [05:02,  1.94it/s][A
+583it [05:03,  1.97it/s][A
+584it [05:03,  2.01it/s][A
+585it [05:04,  2.03it/s][A
+586it [05:04,  2.04it/s][A
+587it [05:05,  2.06it/s][A
+588it [05:05,  2.06it/s][A
+589it [05:06,  1.96it/s][A
+590it [05:06,  1.97it/s][A
+591it [05:07,  1.99it/s][A
+592it [05:07,  2.00it/s][A
+593it [05:08,  2.02it/s][A
+594it [05:08,  2.03it/s][A
+595it [05:09,  2.02it/s][A
+596it [05:09,  2.03it/s][A
+597it [05:10,  2.05it/s][A
+598it [05:10,  2.03it/s][A
+599it [05:11,  2.03it/s][A
+600it [05:11,  2.06it/s][Aindex: 600 loss: 6.9387593
+
+601it [05:12,  2.05it/s][A
+602it [05:12,  2.04it/s][A
+603it [05:13,  2.05it/s][A
+604it [05:13,  2.05it/s][A
+605it [05:14,  2.06it/s][A
+606it [05:14,  2.06it/s][A
+607it [05:15,  2.01it/s][A
+608it [05:15,  2.01it/s][A
+609it [05:16,  2.04it/s][A
+610it [05:16,  2.01it/s][A
+611it [05:17,  2.01it/s][A
+612it [05:17,  2.04it/s][A
+613it [05:18,  2.06it/s][A
+614it [05:18,  2.08it/s][A
+615it [05:19,  2.10it/s][A
+616it [05:19,  2.11it/s][A
+617it [05:19,  2.13it/s][A
+618it [05:20,  2.13it/s][A
+619it [05:20,  2.12it/s][A
+620it [05:21,  2.13it/s][A
+621it [05:21,  2.09it/s][A
+622it [05:22,  2.08it/s][A
+623it [05:22,  2.08it/s][A
+624it [05:23,  2.10it/s][A
+625it [05:23,  2.11it/s][A
+626it [05:24,  2.11it/s][A
+627it [05:24,  2.11it/s][A
+628it [05:25,  2.12it/s][A
+629it [05:25,  2.12it/s][A
+630it [05:26,  2.12it/s][A
+631it [05:26,  2.12it/s][A
+632it [05:27,  2.10it/s][A
+633it [05:27,  2.10it/s][A
+634it [05:28,  2.10it/s][A
+635it [05:28,  2.11it/s][A
+636it [05:28,  2.11it/s][A
+637it [05:29,  2.12it/s][A
+638it [05:29,  2.13it/s][A
+639it [05:30,  2.12it/s][A
+640it [05:30,  2.12it/s][A
+641it [05:31,  2.11it/s][A
+642it [05:31,  2.11it/s][A
+643it [05:32,  2.11it/s][A
+644it [05:32,  2.13it/s][A
+645it [05:33,  2.12it/s][A
+646it [05:33,  2.12it/s][A
+647it [05:34,  2.11it/s][A
+648it [05:34,  2.10it/s][A
+649it [05:35,  2.10it/s][A
+650it [05:35,  2.09it/s][A
+651it [05:36,  2.09it/s][A
+652it [05:36,  2.09it/s][A
+653it [05:37,  2.01it/s][A
+654it [05:37,  2.05it/s][A
+655it [05:38,  2.05it/s][A
+656it [05:38,  2.07it/s][A
+657it [05:39,  2.07it/s][A
+658it [05:39,  2.09it/s][A
+659it [05:39,  2.08it/s][A
+660it [05:40,  2.08it/s][A
+661it [05:40,  2.08it/s][A
+662it [05:41,  2.10it/s][A
+663it [05:41,  2.12it/s][A
+664it [05:42,  2.10it/s][A
+665it [05:42,  2.11it/s][A
+666it [05:43,  2.10it/s][A
+667it [05:43,  2.11it/s][A
+668it [05:44,  2.11it/s][A
+669it [05:44,  2.11it/s][A
+670it [05:45,  2.07it/s][A
+671it [05:45,  2.09it/s][A
+672it [05:46,  2.11it/s][A
+673it [05:46,  2.11it/s][A
+674it [05:47,  2.11it/s][A
+675it [05:47,  2.10it/s][A
+676it [05:48,  2.12it/s][A
+677it [05:48,  2.12it/s][A
+678it [05:49,  2.10it/s][A
+679it [05:49,  2.11it/s][A
+680it [05:49,  2.11it/s][A
+681it [05:50,  2.11it/s][A
+682it [05:50,  2.11it/s][A
+683it [05:51,  2.10it/s][A
+684it [05:51,  2.09it/s][A
+685it [05:52,  1.93it/s][A
+686it [05:52,  1.95it/s][A
+687it [05:53,  1.97it/s][A
+688it [05:53,  1.96it/s][A
+689it [05:54,  1.98it/s][A
+690it [05:54,  2.00it/s][A
+691it [05:55,  2.04it/s][A
+692it [05:55,  2.04it/s][A
+693it [05:56,  2.04it/s][A
+694it [05:56,  2.04it/s][A
+695it [05:57,  2.04it/s][A
+696it [05:57,  2.03it/s][A
+697it [05:58,  2.06it/s][A
+698it [05:58,  2.04it/s][A
+699it [05:59,  2.03it/s][A
+700it [05:59,  2.02it/s][A
+701it [06:00,  2.02it/s][A
+702it [06:00,  2.04it/s][A
+703it [06:01,  2.05it/s][A
+704it [06:01,  2.06it/s][A
+705it [06:02,  2.06it/s][A
+706it [06:02,  1.82it/s][A
+707it [06:03,  1.87it/s][A
+708it [06:03,  1.92it/s][A
+709it [06:04,  1.95it/s][A
+710it [06:04,  2.00it/s][A
+711it [06:05,  2.02it/s][A
+712it [06:05,  2.04it/s][A
+713it [06:06,  2.05it/s][A
+714it [06:06,  2.05it/s][A
+715it [06:07,  2.04it/s][A
+716it [06:07,  1.99it/s][A
+717it [06:08,  2.02it/s][A
+718it [06:08,  2.02it/s][A
+719it [06:09,  2.03it/s][A
+720it [06:09,  2.04it/s][A
+721it [06:10,  2.05it/s][A
+722it [06:10,  2.05it/s][A
+723it [06:11,  2.05it/s][A
+724it [06:11,  2.05it/s][A
+725it [06:12,  2.04it/s][A
+726it [06:12,  1.99it/s][A
+727it [06:13,  1.99it/s][A
+728it [06:13,  1.96it/s][A
+729it [06:14,  1.98it/s][A
+730it [06:14,  2.00it/s][A
+731it [06:15,  2.02it/s][A
+732it [06:15,  2.02it/s][A
+733it [06:16,  2.03it/s][A
+734it [06:16,  2.04it/s][A
+735it [06:17,  2.06it/s][A
+736it [06:17,  2.07it/s][A
+737it [06:18,  2.07it/s][A
+738it [06:18,  2.05it/s][A
+739it [06:19,  2.06it/s][A
+740it [06:19,  2.08it/s][A
+741it [06:20,  2.08it/s][A
+742it [06:20,  2.08it/s][A
+743it [06:21,  2.08it/s][A
+744it [06:21,  2.09it/s][A
+745it [06:22,  2.08it/s][A
+746it [06:22,  2.08it/s][A
+747it [06:23,  2.08it/s][A
+748it [06:23,  2.08it/s][A
+749it [06:23,  2.07it/s][A
+750it [06:24,  2.08it/s][A
+751it [06:24,  2.09it/s][A
+752it [06:25,  2.07it/s][A
+753it [06:25,  2.07it/s][A
+754it [06:26,  2.07it/s][A
+755it [06:26,  2.08it/s][A
+756it [06:27,  2.08it/s][A
+757it [06:27,  2.11it/s][A
+758it [06:28,  1.98it/s][A
+759it [06:28,  2.04it/s][A
+760it [06:29,  2.03it/s][A
+761it [06:29,  2.04it/s][A
+762it [06:30,  2.05it/s][A
+763it [06:30,  2.05it/s][A
+764it [06:31,  2.04it/s][A
+765it [06:31,  2.05it/s][A
+766it [06:32,  2.03it/s][A
+767it [06:32,  2.03it/s][A
+768it [06:33,  2.03it/s][A
+769it [06:33,  2.02it/s][A
+770it [06:34,  2.02it/s][A
+771it [06:34,  2.01it/s][A
+772it [06:35,  2.02it/s][A
+773it [06:35,  2.03it/s][A
+774it [06:36,  2.03it/s][A
+775it [06:36,  2.03it/s][A
+776it [06:37,  2.04it/s][A
+777it [06:37,  2.05it/s][A
+778it [06:38,  2.06it/s][A
+779it [06:38,  2.04it/s][A
+780it [06:39,  2.06it/s][A
+781it [06:39,  2.06it/s][A
+782it [06:40,  2.06it/s][A
+783it [06:40,  2.05it/s][A
+784it [06:41,  2.05it/s][A
+785it [06:41,  2.05it/s][A
+786it [06:42,  2.05it/s][A
+787it [06:42,  2.07it/s][A
+788it [06:43,  2.08it/s][A
+789it [06:43,  2.07it/s][A
+790it [06:44,  2.06it/s][A
+791it [06:44,  2.05it/s][A
+792it [06:44,  2.05it/s][A
+793it [06:45,  2.05it/s][A
+794it [06:45,  2.05it/s][A
+795it [06:46,  2.05it/s][A
+796it [06:46,  2.06it/s][A
+797it [06:47,  2.05it/s][A
+798it [06:47,  2.05it/s][A
+799it [06:48,  2.04it/s][A
+800it [06:48,  2.04it/s][Aindex: 800 loss: 6.807178
+
+801it [06:49,  2.05it/s][A
+802it [06:49,  2.06it/s][A
+803it [06:50,  2.04it/s][A
+804it [06:50,  2.05it/s][A
+805it [06:51,  2.05it/s][A
+806it [06:51,  2.04it/s][A
+807it [06:52,  2.05it/s][A
+808it [06:52,  2.05it/s][A
+809it [06:53,  2.04it/s][A
+810it [06:53,  1.94it/s][A
+811it [06:54,  1.95it/s][A
+812it [06:54,  1.91it/s][A
+813it [06:55,  1.93it/s][A
+814it [06:55,  1.98it/s][A
+815it [06:56,  2.00it/s][A
+816it [06:56,  2.01it/s][A
+817it [06:57,  2.01it/s][A
+818it [06:57,  2.03it/s][A
+819it [06:58,  2.04it/s][A
+820it [06:58,  2.02it/s][A
+821it [06:59,  2.02it/s][A
+822it [06:59,  2.01it/s][A
+823it [07:00,  2.02it/s][A
+824it [07:00,  2.03it/s][A
+825it [07:01,  2.05it/s][A
+826it [07:01,  2.05it/s][A
+827it [07:02,  2.06it/s][A
+828it [07:02,  2.06it/s][A
+829it [07:03,  2.01it/s][A
+830it [07:03,  2.03it/s][A
+831it [07:04,  1.92it/s][A
+832it [07:04,  1.96it/s][A
+833it [07:05,  1.97it/s][A
+834it [07:05,  2.00it/s][A
+835it [07:06,  2.02it/s][A
+836it [07:06,  2.05it/s][A
+837it [07:07,  2.07it/s][A
+838it [07:07,  2.07it/s][A
+839it [07:08,  2.06it/s][A
+840it [07:08,  2.07it/s][A
+841it [07:09,  1.94it/s][A
+842it [07:09,  1.96it/s][A
+843it [07:10,  1.97it/s][A
+844it [07:10,  2.00it/s][A
+845it [07:11,  2.02it/s][A
+846it [07:11,  2.04it/s][A
+847it [07:12,  2.03it/s][A
+848it [07:12,  1.99it/s][A
+849it [07:13,  1.94it/s][A
+850it [07:13,  1.97it/s][A
+851it [07:14,  1.86it/s][A
+852it [07:14,  1.91it/s][A
+853it [07:15,  1.96it/s][A
+854it [07:15,  1.98it/s][A
+855it [07:16,  2.02it/s][A
+856it [07:16,  2.03it/s][A
+857it [07:17,  2.06it/s][A
+858it [07:17,  2.05it/s][A
+859it [07:18,  2.05it/s][A
+860it [07:18,  2.06it/s][A
+861it [07:19,  2.08it/s][A
+862it [07:19,  2.09it/s][A
+863it [07:20,  2.13it/s][A
+864it [07:20,  2.11it/s][A
+865it [07:21,  2.11it/s][A
+866it [07:21,  2.12it/s][A
+867it [07:22,  2.13it/s][A
+868it [07:22,  2.14it/s][A
+869it [07:22,  2.14it/s][A
+870it [07:23,  2.14it/s][A
+871it [07:23,  2.13it/s][A
+872it [07:24,  2.14it/s][A
+873it [07:24,  2.11it/s][A
+874it [07:25,  2.09it/s][A
+875it [07:25,  2.09it/s][A
+876it [07:26,  2.10it/s][A
+877it [07:26,  2.11it/s][A
+878it [07:27,  2.10it/s][A
+879it [07:27,  2.11it/s][A
+880it [07:28,  2.12it/s][A
+881it [07:28,  2.12it/s][A
+882it [07:29,  2.13it/s][A
+883it [07:29,  2.13it/s][A
+884it [07:30,  1.96it/s][A
+885it [07:30,  2.00it/s][A
+886it [07:31,  2.03it/s][A
+887it [07:31,  2.05it/s][A
+888it [07:32,  2.07it/s][A
+889it [07:32,  2.08it/s][A
+890it [07:33,  2.08it/s][A
+891it [07:33,  1.95it/s][A
+892it [07:34,  2.00it/s][A
+893it [07:34,  2.05it/s][A
+894it [07:35,  2.01it/s][A
+895it [07:35,  2.01it/s][A
+896it [07:36,  2.04it/s][A
+897it [07:36,  2.07it/s][A
+898it [07:36,  2.10it/s][A
+899it [07:37,  2.10it/s][A
+900it [07:37,  2.11it/s][A
+901it [07:38,  2.12it/s][A
+902it [07:38,  2.13it/s][A
+903it [07:39,  2.12it/s][A
+904it [07:39,  2.12it/s][A
+905it [07:40,  2.12it/s][A
+906it [07:40,  2.15it/s][A
+907it [07:41,  2.15it/s][A
+908it [07:41,  2.14it/s][A
+909it [07:42,  2.15it/s][A
+910it [07:42,  2.14it/s][A
+911it [07:43,  2.10it/s][A
+912it [07:43,  2.10it/s][A
+913it [07:44,  2.09it/s][A
+914it [07:44,  2.10it/s][A
+915it [07:45,  1.98it/s][A
+916it [07:45,  2.01it/s][A
+917it [07:46,  2.03it/s][A
+918it [07:46,  2.07it/s][A
+919it [07:47,  2.09it/s][A
+920it [07:47,  2.10it/s][A
+921it [07:47,  2.10it/s][A
+922it [07:48,  2.11it/s][A
+923it [07:48,  2.11it/s][A
+924it [07:49,  2.04it/s][A
+925it [07:49,  2.06it/s][A
+926it [07:50,  2.06it/s][A
+927it [07:50,  2.08it/s][A
+928it [07:51,  2.09it/s][A
+929it [07:51,  2.09it/s][A
+930it [07:52,  2.09it/s][A
+931it [07:52,  2.09it/s][A
+932it [07:53,  2.11it/s][A
+933it [07:53,  2.12it/s][A
+934it [07:54,  2.12it/s][A
+935it [07:54,  2.12it/s][A
+936it [07:55,  2.10it/s][A
+937it [07:55,  2.08it/s][A
+938it [07:55,  2.22it/s][A938it [07:56,  1.97it/s]
+epoch: 1 validateAccuracy: 0.0098 trainAccuracy: 0.0035 delta: 0.0086
+Training:   0%|          | 2/1600 [17:28<232:52:10, 524.61s/it]
+0it [00:00, ?it/s][Aindex: 0 loss: 6.525089
+
+1it [00:00,  1.70it/s][A
+2it [00:01,  2.05it/s][A
+3it [00:01,  2.06it/s][A
+4it [00:01,  2.04it/s][A
+5it [00:02,  2.04it/s][A
+6it [00:02,  2.05it/s][A
+7it [00:03,  2.05it/s][A
+8it [00:03,  2.06it/s][A
+9it [00:04,  2.07it/s][A
+10it [00:04,  2.06it/s][A
+11it [00:05,  1.98it/s][A
+12it [00:05,  2.04it/s][A
+13it [00:06,  2.04it/s][A
+14it [00:06,  2.03it/s][A
+15it [00:07,  2.07it/s][A
+16it [00:07,  2.08it/s][A
+17it [00:08,  2.07it/s][A
+18it [00:08,  2.07it/s][A
+19it [00:09,  2.07it/s][A
+20it [00:09,  2.06it/s][A
+21it [00:10,  2.06it/s][A
+22it [00:10,  2.04it/s][A
+23it [00:11,  2.05it/s][A
+24it [00:11,  2.04it/s][A
+25it [00:12,  2.06it/s][A
+26it [00:12,  2.06it/s][A
+27it [00:13,  2.06it/s][A
+28it [00:13,  2.05it/s][A
+29it [00:14,  2.07it/s][A
+30it [00:14,  2.05it/s][A
+31it [00:15,  2.05it/s][A
+32it [00:15,  2.01it/s][A
+33it [00:16,  2.02it/s][A
+34it [00:16,  2.06it/s][A
+35it [00:17,  2.06it/s][A
+36it [00:17,  2.08it/s][A
+37it [00:18,  2.09it/s][A
+38it [00:18,  2.10it/s][A
+39it [00:18,  2.11it/s][A
+40it [00:19,  2.12it/s][A
+41it [00:19,  2.11it/s][A
+42it [00:20,  2.10it/s][A
+43it [00:20,  2.08it/s][A
+44it [00:21,  2.09it/s][A
+45it [00:21,  2.09it/s][A
+46it [00:22,  2.08it/s][A
+47it [00:22,  2.10it/s][A
+48it [00:23,  2.11it/s][A
+49it [00:23,  2.11it/s][A
+50it [00:24,  2.11it/s][A
+51it [00:24,  2.10it/s][A
+52it [00:25,  2.09it/s][A
+53it [00:25,  2.09it/s][A
+54it [00:26,  2.09it/s][A
+55it [00:26,  2.09it/s][A
+56it [00:27,  2.07it/s][A
+57it [00:27,  2.07it/s][A
+58it [00:28,  2.08it/s][A
+59it [00:28,  2.09it/s][A
+60it [00:29,  2.09it/s][A
+61it [00:29,  2.09it/s][A
+62it [00:29,  2.09it/s][A
+63it [00:30,  2.09it/s][A
+64it [00:30,  2.03it/s][A
+65it [00:31,  2.03it/s][A
+66it [00:31,  2.03it/s][A
+67it [00:32,  2.03it/s][A
+68it [00:32,  2.05it/s][A
+69it [00:33,  2.07it/s][A
+70it [00:33,  2.08it/s][A
+71it [00:34,  2.08it/s][A
+72it [00:34,  2.12it/s][A
+73it [00:35,  2.11it/s][A
+74it [00:35,  2.11it/s][A
+75it [00:36,  2.10it/s][A
+76it [00:36,  2.09it/s][A
+77it [00:37,  2.09it/s][A
+78it [00:37,  2.10it/s][A
+79it [00:38,  2.11it/s][A
+80it [00:38,  2.10it/s][A
+81it [00:39,  2.04it/s][A
+82it [00:39,  2.02it/s][A
+83it [00:40,  2.05it/s][A
+84it [00:40,  2.05it/s][A
+85it [00:41,  1.91it/s][A
+86it [00:41,  1.95it/s][A
+87it [00:42,  1.96it/s][A
+88it [00:42,  2.00it/s][A
+89it [00:43,  2.03it/s][A
+90it [00:43,  2.04it/s][A
+91it [00:44,  2.07it/s][A
+92it [00:44,  2.11it/s][A
+93it [00:45,  2.07it/s][A
+94it [00:45,  2.08it/s][A
+95it [00:46,  2.07it/s][A
+96it [00:46,  2.07it/s][A
+97it [00:46,  2.08it/s][A
+98it [00:47,  2.08it/s][A
+99it [00:47,  2.10it/s][A
+100it [00:48,  2.11it/s][A
+101it [00:48,  2.09it/s][A
+102it [00:49,  2.11it/s][A
+103it [00:49,  2.14it/s][A
+104it [00:50,  2.14it/s][A
+105it [00:50,  2.09it/s][A
+106it [00:51,  2.10it/s][A
+107it [00:51,  2.09it/s][A
+108it [00:52,  2.10it/s][A
+109it [00:52,  2.09it/s][A
+110it [00:53,  2.10it/s][A
+111it [00:53,  2.11it/s][A
+112it [00:54,  2.11it/s][A
+113it [00:54,  2.09it/s][A
+114it [00:55,  2.10it/s][A
+115it [00:55,  2.12it/s][A
+116it [00:55,  2.12it/s][A
+117it [00:56,  1.96it/s][A
+118it [00:57,  2.00it/s][A
+119it [00:57,  2.02it/s][A
+120it [00:58,  2.04it/s][A
+121it [00:58,  2.06it/s][A
+122it [00:58,  2.09it/s][A
+123it [00:59,  2.10it/s][A
+124it [00:59,  2.10it/s][A
+125it [01:00,  2.11it/s][A
+126it [01:00,  2.12it/s][A
+127it [01:01,  2.12it/s][A
+128it [01:01,  2.15it/s][A
+129it [01:02,  2.14it/s][A
+130it [01:02,  2.12it/s][A
+131it [01:03,  2.13it/s][A
+132it [01:03,  2.12it/s][A
+133it [01:04,  2.13it/s][A
+134it [01:04,  2.14it/s][A
+135it [01:05,  2.15it/s][A
+136it [01:05,  2.15it/s][A
+137it [01:05,  2.14it/s][A
+138it [01:06,  2.14it/s][A
+139it [01:06,  2.13it/s][A
+140it [01:07,  2.16it/s][A
+141it [01:07,  2.14it/s][A
+142it [01:08,  2.12it/s][A
+143it [01:08,  2.10it/s][A
+144it [01:09,  2.09it/s][A
+145it [01:09,  2.07it/s][A
+146it [01:10,  2.07it/s][A
+147it [01:10,  2.06it/s][A
+148it [01:11,  2.07it/s][A
+149it [01:11,  2.06it/s][A
+150it [01:12,  2.07it/s][A
+151it [01:12,  2.07it/s][A
+152it [01:13,  2.05it/s][A
+153it [01:13,  2.04it/s][A
+154it [01:14,  2.06it/s][A
+155it [01:14,  2.07it/s][A
+156it [01:15,  2.08it/s][A
+157it [01:15,  2.07it/s][A
+158it [01:16,  2.06it/s][A
+159it [01:16,  2.06it/s][A
+160it [01:17,  2.04it/s][A
+161it [01:17,  2.02it/s][A
+162it [01:18,  1.92it/s][A
+163it [01:18,  1.95it/s][A
+164it [01:19,  1.97it/s][A
+165it [01:19,  2.00it/s][A
+166it [01:20,  2.02it/s][A
+167it [01:20,  2.04it/s][A
+168it [01:21,  2.06it/s][A
+169it [01:21,  2.07it/s][A
+170it [01:22,  1.95it/s][A
+171it [01:22,  1.98it/s][A
+172it [01:23,  1.99it/s][A
+173it [01:23,  2.00it/s][A
+174it [01:24,  2.01it/s][A
+175it [01:24,  2.05it/s][A
+176it [01:25,  2.07it/s][A
+177it [01:25,  2.05it/s][A
+178it [01:26,  2.05it/s][A
+179it [01:26,  2.05it/s][A
+180it [01:27,  2.01it/s][A
+181it [01:27,  2.01it/s][A
+182it [01:28,  2.04it/s][A
+183it [01:28,  2.04it/s][A
+184it [01:28,  2.06it/s][A
+185it [01:29,  2.08it/s][A
+186it [01:29,  2.08it/s][A
+187it [01:30,  2.07it/s][A
+188it [01:30,  2.07it/s][A
+189it [01:31,  2.09it/s][A
+190it [01:31,  2.08it/s][A
+191it [01:32,  1.94it/s][A
+192it [01:32,  1.97it/s][A
+193it [01:33,  1.99it/s][A
+194it [01:33,  2.03it/s][A
+195it [01:34,  2.04it/s][A
+196it [01:34,  2.05it/s][A
+197it [01:35,  2.06it/s][A
+198it [01:35,  2.08it/s][A
+199it [01:36,  2.10it/s][A
+200it [01:36,  2.11it/s][Aindex: 200 loss: 6.055805
+
+201it [01:37,  2.11it/s][A
+202it [01:37,  2.09it/s][A
+203it [01:38,  2.12it/s][A
+204it [01:38,  2.11it/s][A
+205it [01:39,  2.11it/s][A
+206it [01:39,  2.12it/s][A
+207it [01:40,  2.12it/s][A
+208it [01:40,  2.15it/s][A
+209it [01:40,  2.15it/s][A
+210it [01:41,  2.14it/s][A
+211it [01:41,  2.15it/s][A
+212it [01:42,  2.15it/s][A
+213it [01:42,  2.16it/s][A
+214it [01:43,  2.14it/s][A
+215it [01:43,  2.14it/s][A
+216it [01:44,  2.14it/s][A
+217it [01:44,  2.16it/s][A
+218it [01:45,  2.14it/s][A
+219it [01:45,  2.13it/s][A
+220it [01:46,  2.14it/s][A
+221it [01:46,  2.14it/s][A
+222it [01:47,  2.16it/s][A
+223it [01:47,  2.11it/s][A
+224it [01:48,  2.12it/s][A
+225it [01:48,  2.11it/s][A
+226it [01:48,  2.11it/s][A
+227it [01:49,  2.13it/s][A
+228it [01:49,  2.13it/s][A
+229it [01:50,  2.13it/s][A
+230it [01:50,  2.13it/s][A
+231it [01:51,  2.14it/s][A
+232it [01:51,  2.13it/s][A
+233it [01:52,  2.13it/s][A
+234it [01:52,  2.12it/s][A
+235it [01:53,  2.08it/s][A
+236it [01:53,  2.09it/s][A
+237it [01:54,  2.09it/s][A
+238it [01:54,  2.07it/s][A
+239it [01:55,  2.06it/s][A
+240it [01:55,  2.06it/s][A
+241it [01:56,  2.08it/s][A
+242it [01:56,  2.08it/s][A
+243it [01:57,  2.09it/s][A
+244it [01:57,  2.09it/s][A
+245it [01:58,  2.07it/s][A
+246it [01:58,  2.06it/s][A
+247it [01:58,  2.07it/s][A
+248it [01:59,  2.07it/s][A
+249it [01:59,  2.08it/s][A
+250it [02:00,  2.07it/s][A
+251it [02:00,  2.07it/s][A
+252it [02:01,  2.08it/s][A
+253it [02:01,  2.06it/s][A
+254it [02:02,  2.06it/s][A
+255it [02:02,  2.06it/s][A
+256it [02:03,  2.06it/s][A
+257it [02:03,  2.05it/s][A
+258it [02:04,  2.04it/s][A
+259it [02:04,  2.07it/s][A
+260it [02:05,  2.07it/s][A
+261it [02:05,  2.06it/s][A
+262it [02:06,  2.06it/s][A
+263it [02:06,  2.06it/s][A
+264it [02:07,  2.07it/s][A
+265it [02:07,  2.07it/s][A
+266it [02:08,  1.98it/s][A
+267it [02:08,  2.02it/s][A
+268it [02:09,  2.02it/s][A
+269it [02:09,  2.01it/s][A
+270it [02:10,  2.02it/s][A
+271it [02:10,  2.05it/s][A
+272it [02:11,  2.06it/s][A
+273it [02:11,  2.06it/s][A
+274it [02:12,  2.08it/s][A
+275it [02:12,  2.07it/s][A
+276it [02:13,  2.07it/s][A
+277it [02:13,  2.04it/s][A
+278it [02:14,  2.05it/s][A
+279it [02:14,  2.05it/s][A
+280it [02:15,  2.04it/s][A
+281it [02:15,  2.04it/s][A
+282it [02:16,  2.06it/s][A
+283it [02:16,  2.06it/s][A
+284it [02:17,  2.07it/s][A
+285it [02:17,  2.07it/s][A
+286it [02:17,  2.07it/s][A
+287it [02:18,  1.97it/s][A
+288it [02:19,  2.01it/s][A
+289it [02:19,  2.01it/s][A
+290it [02:20,  1.97it/s][A
+291it [02:20,  2.01it/s][A
+292it [02:21,  2.02it/s][A
+293it [02:21,  2.03it/s][A
+294it [02:21,  2.04it/s][A
+295it [02:22,  2.06it/s][A
+296it [02:22,  2.08it/s][A
+297it [02:23,  2.07it/s][A
+298it [02:23,  2.06it/s][A
+299it [02:24,  2.06it/s][A
+300it [02:24,  2.06it/s][A
+301it [02:25,  2.06it/s][A
+302it [02:25,  2.06it/s][A
+303it [02:26,  1.99it/s][A
+304it [02:26,  2.00it/s][A
+305it [02:27,  2.01it/s][A
+306it [02:27,  2.02it/s][A
+307it [02:28,  2.02it/s][A
+308it [02:28,  2.00it/s][A
+309it [02:29,  1.97it/s][A
+310it [02:29,  1.98it/s][A
+311it [02:30,  2.00it/s][A
+312it [02:30,  2.02it/s][A
+313it [02:31,  2.03it/s][A
+314it [02:31,  2.04it/s][A
+315it [02:32,  2.04it/s][A
+316it [02:32,  2.04it/s][A
+317it [02:33,  2.04it/s][A
+318it [02:33,  1.97it/s][A
+319it [02:34,  1.97it/s][A
+320it [02:34,  1.98it/s][A
+321it [02:35,  2.00it/s][A
+322it [02:35,  2.02it/s][A
+323it [02:36,  2.04it/s][A
+324it [02:36,  2.04it/s][A
+325it [02:37,  2.05it/s][A
+326it [02:37,  2.07it/s][A
+327it [02:38,  2.08it/s][A
+328it [02:38,  2.09it/s][A
+329it [02:39,  2.08it/s][A
+330it [02:39,  2.09it/s][A
+331it [02:40,  2.09it/s][A
+332it [02:40,  2.10it/s][A
+333it [02:41,  2.11it/s][A
+334it [02:41,  2.03it/s][A
+335it [02:42,  2.06it/s][A
+336it [02:42,  2.07it/s][A
+337it [02:43,  2.08it/s][A
+338it [02:43,  2.09it/s][A
+339it [02:44,  1.96it/s][A
+340it [02:44,  2.00it/s][A
+341it [02:45,  2.02it/s][A
+342it [02:45,  2.05it/s][A
+343it [02:45,  2.08it/s][A
+344it [02:46,  2.09it/s][A
+345it [02:46,  2.12it/s][A
+346it [02:47,  2.12it/s][A
+347it [02:47,  2.11it/s][A
+348it [02:48,  2.12it/s][A
+349it [02:48,  1.97it/s][A
+350it [02:49,  2.00it/s][A
+351it [02:49,  2.02it/s][A
+352it [02:50,  2.04it/s][A
+353it [02:50,  2.07it/s][A
+354it [02:51,  2.08it/s][A
+355it [02:51,  2.11it/s][A
+356it [02:52,  2.09it/s][A
+357it [02:52,  2.00it/s][A
+358it [02:53,  2.05it/s][A
+359it [02:53,  2.09it/s][A
+360it [02:54,  1.96it/s][A
+361it [02:54,  2.00it/s][A
+362it [02:55,  2.03it/s][A
+363it [02:55,  2.06it/s][A
+364it [02:56,  2.07it/s][A
+365it [02:56,  2.06it/s][A
+366it [02:57,  2.08it/s][A
+367it [02:57,  2.08it/s][A
+368it [02:58,  2.11it/s][A
+369it [02:58,  2.11it/s][A
+370it [02:59,  2.09it/s][A
+371it [02:59,  2.10it/s][A
+372it [03:00,  2.10it/s][A
+373it [03:00,  2.08it/s][A
+374it [03:00,  2.09it/s][A
+375it [03:01,  2.08it/s][A
+376it [03:01,  2.09it/s][A
+377it [03:02,  2.10it/s][A
+378it [03:02,  2.10it/s][A
+379it [03:03,  2.11it/s][A
+380it [03:03,  2.12it/s][A
+381it [03:04,  2.12it/s][A
+382it [03:04,  2.10it/s][A
+383it [03:05,  2.09it/s][A
+384it [03:05,  2.02it/s][A
+385it [03:06,  2.05it/s][A
+386it [03:06,  2.07it/s][A
+387it [03:07,  2.11it/s][A
+388it [03:07,  2.10it/s][A
+389it [03:08,  2.10it/s][A
+390it [03:08,  2.10it/s][A
+391it [03:09,  2.10it/s][A
+392it [03:09,  1.95it/s][A
+393it [03:10,  1.98it/s][A
+394it [03:10,  2.03it/s][A
+395it [03:11,  2.05it/s][A
+396it [03:11,  2.05it/s][A
+397it [03:12,  2.05it/s][A
+398it [03:12,  2.05it/s][A
+399it [03:13,  2.06it/s][A
+400it [03:13,  2.06it/s][Aindex: 400 loss: 5.990097
+
+401it [03:14,  2.07it/s][A
+402it [03:14,  2.06it/s][A
+403it [03:15,  2.05it/s][A
+404it [03:15,  2.05it/s][A
+405it [03:15,  2.09it/s][A
+406it [03:16,  2.08it/s][A
+407it [03:16,  2.08it/s][A
+408it [03:17,  2.07it/s][A
+409it [03:17,  2.08it/s][A
+410it [03:18,  2.07it/s][A
+411it [03:18,  2.08it/s][A
+412it [03:19,  2.08it/s][A
+413it [03:19,  2.00it/s][A
+414it [03:20,  1.97it/s][A
+415it [03:20,  1.99it/s][A
+416it [03:21,  2.01it/s][A
+417it [03:21,  2.04it/s][A
+418it [03:22,  2.05it/s][A
+419it [03:22,  2.06it/s][A
+420it [03:23,  2.06it/s][A
+421it [03:23,  2.07it/s][A
+422it [03:24,  2.08it/s][A
+423it [03:24,  2.08it/s][A
+424it [03:25,  2.05it/s][A
+425it [03:25,  2.03it/s][A
+426it [03:26,  1.99it/s][A
+427it [03:26,  1.97it/s][A
+428it [03:27,  1.99it/s][A
+429it [03:27,  1.95it/s][A
+430it [03:28,  1.98it/s][A
+431it [03:28,  2.01it/s][A
+432it [03:29,  2.03it/s][A
+433it [03:29,  2.03it/s][A
+434it [03:30,  1.94it/s][A
+435it [03:30,  1.98it/s][A
+436it [03:31,  1.95it/s][A
+437it [03:31,  1.96it/s][A
+438it [03:32,  1.93it/s][A
+439it [03:32,  1.89it/s][A
+440it [03:33,  1.89it/s][A
+441it [03:33,  1.95it/s][A
+442it [03:34,  2.02it/s][A
+443it [03:34,  2.06it/s][A
+444it [03:35,  2.10it/s][A
+445it [03:35,  2.12it/s][A
+446it [03:36,  2.09it/s][A
+447it [03:36,  2.01it/s][A
+448it [03:37,  1.93it/s][A
+449it [03:37,  1.89it/s][A
+450it [03:38,  1.85it/s][A
+451it [03:39,  1.84it/s][A
+452it [03:39,  1.86it/s][A
+453it [03:40,  1.89it/s][A
+454it [03:40,  1.94it/s][A
+455it [03:41,  2.00it/s][A
+456it [03:41,  2.06it/s][A
+457it [03:41,  2.11it/s][A
+458it [03:42,  2.15it/s][A
+459it [03:42,  2.17it/s][A
+460it [03:43,  2.17it/s][A
+461it [03:43,  2.17it/s][A
+462it [03:44,  2.17it/s][A
+463it [03:44,  2.16it/s][A
+464it [03:45,  2.18it/s][A
+465it [03:45,  2.19it/s][A
+466it [03:46,  2.20it/s][A
+467it [03:46,  2.20it/s][A
+468it [03:46,  2.19it/s][A
+469it [03:47,  2.15it/s][A
+470it [03:47,  2.12it/s][A
+471it [03:48,  1.98it/s][A
+472it [03:48,  2.00it/s][A
+473it [03:49,  2.05it/s][A
+474it [03:49,  2.06it/s][A
+475it [03:50,  2.06it/s][A
+476it [03:50,  1.97it/s][A
+477it [03:51,  1.87it/s][A
+478it [03:52,  1.96it/s][A
+479it [03:52,  2.02it/s][A
+480it [03:52,  2.07it/s][A
+481it [03:53,  2.10it/s][A
+482it [03:53,  2.02it/s][A
+483it [03:54,  1.93it/s][A
+484it [03:54,  2.01it/s][A
+485it [03:55,  2.05it/s][A
+486it [03:55,  2.08it/s][A
+487it [03:56,  2.03it/s][A
+488it [03:57,  1.90it/s][A
+489it [03:57,  1.90it/s][A
+490it [03:57,  1.98it/s][A
+491it [03:58,  2.01it/s][A
+492it [03:58,  2.06it/s][A
+493it [03:59,  2.09it/s][A
+494it [03:59,  2.00it/s][A
+495it [04:00,  1.96it/s][A
+496it [04:00,  2.02it/s][A
+497it [04:01,  2.04it/s][A
+498it [04:01,  2.08it/s][A
+499it [04:02,  1.94it/s][A
+500it [04:03,  1.91it/s][A
+501it [04:03,  1.98it/s][A
+502it [04:03,  2.03it/s][A
+503it [04:04,  2.06it/s][A
+504it [04:04,  2.00it/s][A
+505it [04:05,  2.04it/s][A
+506it [04:05,  2.07it/s][A
+507it [04:06,  2.09it/s][A
+508it [04:06,  2.11it/s][A
+509it [04:07,  2.01it/s][A
+510it [04:07,  1.86it/s][A
+511it [04:08,  1.83it/s][A
+512it [04:09,  1.92it/s][A
+513it [04:09,  1.97it/s][A
+514it [04:09,  2.01it/s][A
+515it [04:10,  2.03it/s][A
