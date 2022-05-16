@@ -292,10 +292,10 @@ if __name__=="__main__":
     #     in_channels=3,patch_size=16, d_model=512, depth=12, num_classes=102,image_size=224,dropout=0)
     # train(model=mlpMixerModel,modelName="MLPMixer",learningRate=2.3e-5,epochs=200,etaMin=1e-5,imageSize=224,batchSize=64,savedName="1.pkl")
     
-    convMixerModel=ConvMixer(dim = 768, depth = 32, kernel_size=7, patch_size=7,n_classes=5001)
-    train(model=convMixerModel,modelName="ConvMixer",learningRate=1e-4,epochs=500,etaMin=1e-7,imageSize=224,batchSize=32,savedName="1.pkl")
+    # convMixerModel=ConvMixer(dim = 768, depth = 32, kernel_size=7, patch_size=7,n_classes=5001)
+    # train(model=convMixerModel,modelName="ConvMixer",learningRate=1e-4,epochs=500,etaMin=1e-7,imageSize=224,batchSize=32,savedName="1.pkl")
     
-    # resnetModel=Resnet50(num_classes=5001)
-    # train(model=resnetModel,modelName="ResNet",learningRate=1e-4,epochs=1600,etaMin=1e-7,imageSize=224,batchSize=64,savedName="1.pkl")
+    resnetModel=Resnet50(num_classes=5001)
+    train(model=resnetModel,modelName="ResNet",learningRate=1e-4,epochs=1600,etaMin=1e-7,imageSize=224,batchSize=64,savedName="1.pkl")
     
     writer.close()

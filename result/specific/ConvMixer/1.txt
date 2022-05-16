@@ -655,3 +655,34 @@ index: 1600 loss: 1.2528914
 index: 1800 loss: 1.5427516
 epoch: 32 validateAccuracy: 0.3486 trainAccuracy: 0.5454 delta: 0.0092
 Training:   7%|▋         | 33/500 [13:57:07<196:12:33, 1512.53s/it]index: 0 loss: 1.2510993
+index: 200 loss: 1.5529184
+index: 400 loss: 1.9291348
+index: 600 loss: 1.5902466
+index: 800 loss: 1.5011015
+index: 1000 loss: 1.6698008
+index: 1200 loss: 2.07817
+index: 1400 loss: 1.5248806
+index: 1600 loss: 1.5531625
+index: 1800 loss: 1.5959113
+epoch: 33 validateAccuracy: 0.3464 trainAccuracy: 0.5637 delta: -0.0022
+Training:   7%|▋         | 34/500 [14:22:47<196:51:59, 1520.86s/it]index: 0 loss: 1.2385719
+index: 200 loss: 1.4915591
+index: 400 loss: 1.2151599
+index: 600 loss: 1.2088163
+index: 800 loss: 1.9013245
+index: 1000 loss: 1.3652055
+index: 1200 loss: 1.382542
+index: 1400 loss: 1.5401176
+index: 1600 loss: 1.6450804
+index: 1800 loss: 1.2438632
+epoch: 34 validateAccuracy: 0.3452 trainAccuracy: 0.5845 delta: -0.0034
+Training:   7%|▋         | 35/500 [14:48:57<198:19:50, 1535.46s/it]index: 0 loss: 1.1929911
+index: 200 loss: 1.6435686
+index: 400 loss: 1.3576794
+index: 600 loss: 1.2051824
+index: 800 loss: 1.5484259
+index: 1000 loss: 1.4041873
+index: 1200 loss: 1.5909173
+index: 1400 loss: 1.1808532
+index: 1600 loss: 1.3298297
+index: 1800 loss: 1.0546255
